@@ -12,30 +12,19 @@ body {
   --fs-xxl: 2rem;
 }
 //Prevent Default Styles
-
-body {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-
-  a {
-    text-decoration: none;
-  }
-  a:active,
-  a:hover,
-  a:focus {
-    background-color: transparent;
-    color: inherit;
-  }
-
-  ul,
-  ol,
-  li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+  list-style: none;
+  text-decoration: none;
+}
+a:active,
+a:hover,
+a:focus {
+  background-color: transparent;
+  color: inherit;
 }
 
 //Header Styles
@@ -44,14 +33,13 @@ body {
 }
 .header {
   background-color: var(--clr-lit);
-  width: 100%;
   padding-inline: clamp(1.25rem, 5vw, 10rem);
   padding-block: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-
+  width: 100%;
   .page-logo {
     display: flex;
     align-items: center;
@@ -60,9 +48,7 @@ body {
     
     img{
       height: 2rem;
-      margin-right: 0;
     }
-    
     h2{
       display: inline;
       margin: 0;

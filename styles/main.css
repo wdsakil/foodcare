@@ -11,31 +11,21 @@ body {
   --fs-xxl: 2rem;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-}
-
-body a {
+  list-style: none;
   text-decoration: none;
 }
 
-body a:active,
-body a:hover,
-body a:focus {
+a:active,
+a:hover,
+a:focus {
   background-color: transparent;
   color: inherit;
-}
-
-body ul,
-body ol,
-body li {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 body {
@@ -44,7 +34,6 @@ body {
 
 .header {
   background-color: var(--clr-lit);
-  width: 100%;
   padding-inline: clamp(1.25rem, 5vw, 10rem);
   padding-block: 0.5rem;
   display: -webkit-box;
@@ -58,6 +47,7 @@ body {
           justify-content: space-between;
   -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 .header .page-logo {
@@ -73,7 +63,6 @@ body {
 
 .header .page-logo img {
   height: 2rem;
-  margin-right: 0;
 }
 
 .header .page-logo h2 {
