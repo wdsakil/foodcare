@@ -12,7 +12,7 @@ body {
   --fs-xxl: 2rem;
 }
 //Prevent Default Styles
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,12 +44,12 @@ body {
     display: flex;
     align-items: center;
     margin-right: 2rem;
-    gap: .5rem;
-    
-    img{
+    gap: 0.5rem;
+
+    img {
       height: 2rem;
     }
-    h2{
+    h2 {
       display: inline;
       margin: 0;
       color: var(--clr-pri);
@@ -60,11 +60,14 @@ body {
   .nav {
     font-size: var(--fs-m);
     display: flex;
-    gap: 2rem;
 
     a {
       color: var(--clr-drk);
       transition: all 0.2s ease-in-out;
+      position: relative;
+      padding-inline: 0.75rem;
+      padding-block: 0.25rem;
+
       &:hover {
         color: var(--clr-pri);
       }
