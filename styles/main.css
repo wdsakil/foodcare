@@ -30,6 +30,7 @@ a:focus {
 
 body {
   background-color: var(--clr-bg);
+  overflow-x: hidden;
 }
 
 .header {
