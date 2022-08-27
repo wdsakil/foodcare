@@ -41,33 +41,46 @@ body {
 //Header Styles
 body {
   background-color: var(--clr-bg);
+}
+.header {
+  background-color: var(--clr-lit);
+  width: 100%;
+  padding-inline: clamp(1.25rem, 5vw, 10rem);
+  padding-block: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 
-  .header {
-    background-color: var(--clr-lit);
-    padding-inline: clamp(1.25rem, 5vw, 10rem);
-    padding-block: 0.5rem;
+  .page-logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-
-    .page-logo {
+    margin-right: 2rem;
+    gap: .5rem;
+    
+    img{
+      height: 2rem;
+      margin-right: 0;
+    }
+    
+    h2{
+      display: inline;
+      margin: 0;
       color: var(--clr-pri);
       font-size: var(--fs-xxl);
       font-weight: 700;
-      margin-right: 2rem;
     }
-    .nav {
-      font-size: var(--fs-m);
-      display: flex;
-      gap: 2rem;
+  }
+  .nav {
+    font-size: var(--fs-m);
+    display: flex;
+    gap: 2rem;
 
-      a {
-        color: var(--clr-drk);
-        transition: all 0.2s ease-in-out;
-        &:hover {
-          color: var(--clr-pri);
-        }
+    a {
+      color: var(--clr-drk);
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: var(--clr-pri);
       }
     }
   }
