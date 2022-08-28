@@ -27,11 +27,14 @@ a:focus {
   color: inherit;
 }
 
-//Header Styles
+// Styles
 body {
   background-color: var(--clr-bg);
   overflow-x: hidden;
+  width: 100vw;
 }
+
+//Header Styles
 .header {
   background-color: var(--clr-lit);
   padding-inline: clamp(1.25rem, 5vw, 10rem);
@@ -40,11 +43,11 @@ body {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  gap: 2rem;
   width: 100%;
   .page-logo {
     display: flex;
     align-items: center;
-    margin-right: 2rem;
     gap: 0.5rem;
 
     img {
@@ -71,6 +74,10 @@ body {
 
       &:hover {
         color: var(--clr-pri);
+      }
+      
+      li:hover {
+        box-shadow: 0 0 5px blue;
       }
     }
   }
