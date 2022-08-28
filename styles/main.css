@@ -37,6 +37,8 @@ body {
   background-color: var(--clr-lit);
   padding-inline: clamp(1.25rem, 3vw, 10rem);
   padding-block: 0.5rem;
+  position: relative;
+  z-index: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,17 +98,29 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: -1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   top: 0;
   bottom: 0;
   right: 0;
   width: 30%;
-  background-color: var(--clr-lit);
+  background-color: var(--clr-pri);
+  padding-top: 5rem;
 }
 
 .header .nav a {
   color: var(--clr-drk);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .header .nav a:hover {
@@ -114,13 +128,27 @@ body {
 }
 
 @media (min-width: 780px) {
+  .header .nav {
+    position: static;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    z-index: auto;
+    width: auto;
+    background-color: transparent;
+    padding-top: 0;
+  }
   .header .nav a {
     padding-inline: 0.75rem;
     padding-block: 0.25rem;
   }
-}
-
-@media only screen and (min-width: 780px) {
   .header .fa-burger {
     display: none;
   }

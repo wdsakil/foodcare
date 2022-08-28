@@ -38,6 +38,8 @@ body {
   background-color: var(--clr-lit);
   padding-inline: clamp(1.25rem, 3vw, 10rem);
   padding-block: 0.5rem;
+  position: relative;
+  z-index: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -78,31 +80,46 @@ body {
     font-size: var(--fs-m);
     position: fixed;
     display: flex;
+    z-index: -1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     top: 0;
     bottom: 0;
     right: 0;
     width: 30%;
-    background-color: var(--clr-lit);
+    background-color: var(--clr-pri);
+    padding-top: 5rem;
 
     a {
       color: var(--clr-drk);
-      transition: all 0.2s ease-in-out;
+      transition: color 0.2s ease-in-out;
       &:hover {
         color: var(--clr-pri);
       }
     }
-    @media (min-width: 780px) {
+  }
+  @media (min-width: 780px) {
+    .nav {
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      z-index: auto;
+      width: auto;
+      background-color: transparent;
+      padding-top: 0;
       a {
         padding-inline: 0.75rem;
         padding-block: 0.25rem;
       }
     }
-  }
-
-  @media only screen and (min-width: 780px) {
     .fa-burger {
       display: none;
     }
+  }
+
+  @media only screen and (min-width: 780px) {
   }
 }
 
