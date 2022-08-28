@@ -37,7 +37,8 @@ body {
   background-color: var(--clr-lit);
   padding-inline: clamp(1.25rem, 3vw, 10rem);
   padding-block: 0.5rem;
-  position: relative;
+  position: fixed;
+  inset: 0 0 auto 0;
   z-index: auto;
   display: -webkit-box;
   display: -ms-flexbox;
