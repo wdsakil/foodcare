@@ -108,11 +108,6 @@ body {
   color: var(--clr-pri);
 }
 
-.header .nav a li:hover {
-  -webkit-box-shadow: 0 0 5px blue;
-          box-shadow: 0 0 5px blue;
-}
-
 @media only screen and (min-width: 780px) {
   .header .nav {
     display: -webkit-box;
