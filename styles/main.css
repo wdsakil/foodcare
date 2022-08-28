@@ -43,21 +43,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   gap: 2rem;
   width: 100%;
-}
-
-@media only screen and (min-width: 780px) {
-  .header {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
 }
 
 .header .page-logo {
@@ -82,17 +74,25 @@ body {
   font-weight: 700;
 }
 
+.header .fa-burger {
+  font-size: var(--fs-xl);
+  color: var(--clr-pri);
+  border: 0.175rem solid var(--clr-pri);
+  border-radius: 0.5rem;
+  padding: 0.1rem;
+  margin-right: 0.5rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.header .fa-burger:hover {
+  color: var(--clr-drk);
+  border-color: var(--clr-drk);
+}
+
 .header .nav {
   font-size: var(--fs-m);
   display: none;
-}
-
-@media only screen and (min-width: 780px) {
-  .header .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 .header .nav a {
@@ -111,5 +111,27 @@ body {
 .header .nav a li:hover {
   -webkit-box-shadow: 0 0 5px blue;
           box-shadow: 0 0 5px blue;
+}
+
+@media only screen and (min-width: 780px) {
+  .header .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header .fa-burger {
+    display: none;
+  }
+}
+
+@media print {
+  .header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header > *:not(.page-logo) {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
