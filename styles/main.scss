@@ -76,25 +76,30 @@ body {
   }
   .nav {
     font-size: var(--fs-m);
-    display: none;
+    position: fixed;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 30%;
+    background-color: var(--clr-lit);
 
     a {
       color: var(--clr-drk);
       transition: all 0.2s ease-in-out;
-      position: relative;
-      padding-inline: 0.75rem;
-      padding-block: 0.25rem;
-
       &:hover {
         color: var(--clr-pri);
+      }
+    }
+    @media (min-width: 780px) {
+      a {
+        padding-inline: 0.75rem;
+        padding-block: 0.25rem;
       }
     }
   }
 
   @media only screen and (min-width: 780px) {
-    .nav {
-      display: flex;
-    }
     .fa-burger {
       display: none;
     }
