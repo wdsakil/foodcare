@@ -36,33 +36,41 @@ body {
 //Header Styles
 .header {
   background-color: var(--clr-lit);
-  padding-inline: clamp(1.25rem, 5vw, 10rem);
+  padding-inline: clamp(1.25rem, 3vw, 10rem);
   padding-block: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   gap: 2rem;
   width: 100%;
+
+  @media only screen and (min-width: 780px) {
+    justify-content: space-between;
+  }
+
   .page-logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-
-    img {
-      height: 2rem;
-    }
-    h2 {
-      display: inline;
-      margin: 0;
-      color: var(--clr-pri);
-      font-size: var(--fs-xxl);
-      font-weight: 700;
-    }
+  }
+  img {
+    height: 2rem;
+  }
+  h2 {
+    display: inline;
+    margin: 0;
+    color: var(--clr-pri);
+    font-size: var(--fs-xxl);
+    font-weight: 700;
   }
   .nav {
     font-size: var(--fs-m);
-    display: flex;
+    display: none;
+
+    @media only screen and (min-width: 780px) {
+      display: flex;
+    }
 
     a {
       color: var(--clr-drk);
@@ -74,7 +82,7 @@ body {
       &:hover {
         color: var(--clr-pri);
       }
-      
+
       li:hover {
         box-shadow: 0 0 5px blue;
       }
