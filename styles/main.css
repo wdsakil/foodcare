@@ -111,16 +111,30 @@ body {
           justify-content: flex-start;
   top: 0;
   bottom: 0;
-  right: 0;
-  width: 30%;
-  background-color: var(--clr-pri);
-  padding-top: 5rem;
+  left: 100%;
+  background-color: white;
+  padding-top: 10rem;
+  overflow-y: auto;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.header .nav.active {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 
 .header .nav a {
+  text-align: center;
   color: var(--clr-drk);
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
+  padding-block: 0.5rem;
+  width: 70vw;
 }
 
 .header .nav a:hover {
@@ -137,15 +151,21 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     z-index: auto;
-    width: auto;
     background-color: transparent;
     padding-top: 0;
+    width: 50vw;
+    overflow-y: visible;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
   }
   .header .nav a {
+    width: auto;
     padding-inline: 0.75rem;
     padding-block: 0.25rem;
   }
