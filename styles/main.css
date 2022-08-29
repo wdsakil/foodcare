@@ -9,6 +9,7 @@ body {
   --fs-l: 1.5rem;
   --fs-xl: 1.75rem;
   --fs-xxl: 2rem;
+  --fs-xxxl: 4rem;
 }
 
 * {
@@ -34,7 +35,7 @@ body {
 }
 
 .header {
-  background-color: var(--clr-lit);
+  background-color: transparent;
   padding-inline: clamp(1.25rem, 3vw, 10rem);
   padding-block: 0.5rem;
   position: fixed;
@@ -49,8 +50,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   gap: 2rem;
   width: 100%;
 }
@@ -173,12 +172,48 @@ body {
   }
   .header .nav a {
     width: auto;
+    color: var(--clr-lit);
     padding-inline: 0.75rem;
     padding-block: 0.25rem;
   }
   .header .fa-burger {
     display: none;
   }
+}
+
+.hero .wrapper {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.hero .item {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-size: cover;
+  background-position: center bottom;
+  color: var(--clr-lit);
+  font-family: 'Poppins', sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .item .title {
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 700;
+  line-height: 3.5rem;
+  text-transform: uppercase;
+}
+
+.hero .item-1 {
+  background-image: url(/img/hero-1.jpg);
+}
+
+.hero .item-2 {
+  background-image: url(/img/hero-2.jpg);
 }
 
 @media print {
