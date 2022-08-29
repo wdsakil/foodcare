@@ -96,6 +96,11 @@ body {
 
     &.active{
       transform: translateX(-100%);
+
+      & ~ .fa-burger{
+        color: var(--clr-drk);
+        border-color: var(--clr-drk);
+      }
     }
 
     a {
