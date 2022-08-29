@@ -86,6 +86,7 @@ body {
   margin-right: 0.5rem;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .header .fa-burger:hover {
