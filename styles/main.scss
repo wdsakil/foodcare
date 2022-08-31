@@ -4,8 +4,8 @@ body {
   --clr-pri: #ff0000;
   --clr-lit: #fff;
   --clr-drk: #000;
-  --fs-s: 1rem;
-  --fs-s: 1rem;
+  --fs-xs: 1rem;
+  --fs-s: 1.125rem;
   --fs-m: 1.25rem;
   --fs-l: 1.5rem;
   --fs-xl: 1.75rem;
@@ -14,7 +14,7 @@ body {
 }
 
 // Third Party
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300+700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"); 
 
 //Default Styles
 * {
@@ -194,12 +194,11 @@ body {
       background-image: url(../img/hero-2.jpg);
     }
     
-    * {
-      border: #fff 1px solid;
-    }
     
     .content {
-      margin: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .title {
       font-size: clamp(3rem, 10vw, 4.5rem);
@@ -207,13 +206,49 @@ body {
       line-height: 1.1;
       text-transform: uppercase;
       text-shadow: 0 0.25rem 0.3rem rgba(#000, 0.3);
-      
-      padding: 0.5rem;
-      margin-block: 0.5rem;
       width: fit-content;
+      padding: .75rem;
+      margin-top: 0.5rem;
+
+      @media (max-width: 450px){
+        font-size: 3.5rem;
+      }
+    }
+    .subtitle{
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      font-weight: 300;
+      font-family: 'Roboto', sans-serif;
+      margin-top: 0.5rem;
+    }
+    .btns{
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      
+      @media (max-width: 450px){
+flex-direction: column;
+gap: 1rem;
+}
+    }
+    .btn{
+      font-size: 1.1rem;
+      font-weight: 400;
+      padding: 0.75rem 2rem;
+      border-radius: 10rem;
+      background-color: var(--clr-pri);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &.alt{
+        background-color: rgba( #000000, 0.5);
+      }
+      &:hover{
+        box-shadow: 0 0.25rem 0.5rem #0002;
+      }
     }
   }
 }
+
 
 // Basic Media Queries
 

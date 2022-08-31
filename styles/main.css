@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300+700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap");
 body {
   --clr-bg: #c8c8c8;
   --clr-pri: #ff0000;
   --clr-lit: #fff;
   --clr-drk: #000;
-  --fs-s: 1rem;
-  --fs-s: 1rem;
+  --fs-xs: 1rem;
+  --fs-s: 1.125rem;
   --fs-m: 1.25rem;
   --fs-l: 1.5rem;
   --fs-xl: 1.75rem;
@@ -226,12 +226,17 @@ body {
   background-image: url(../img/hero-2.jpg);
 }
 
-.hero .item * {
-  border: #fff 1px solid;
-}
-
 .hero .item .content {
-  margin: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero .item .title {
@@ -240,11 +245,62 @@ body {
   line-height: 1.1;
   text-transform: uppercase;
   text-shadow: 0 0.25rem 0.3rem rgba(0, 0, 0, 0.3);
-  padding: 0.5rem;
-  margin-block: 0.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  padding: .75rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 450px) {
+  .hero .item .title {
+    font-size: 3.5rem;
+  }
+}
+
+.hero .item .subtitle {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 0.5rem;
+}
+
+.hero .item .btns {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 450px) {
+  .hero .item .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.hero .item .btn {
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 0.75rem 2rem;
+  border-radius: 10rem;
+  background-color: var(--clr-pri);
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero .item .btn.alt {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .item .btn:hover {
+  -webkit-box-shadow: 0 0.25rem 0.5rem #0002;
+          box-shadow: 0 0.25rem 0.5rem #0002;
 }
 
 @media print {
