@@ -67,7 +67,6 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    text-shadow: 0 0 1rem green;
   }
   svg {
     height: 2.125rem;
@@ -189,10 +188,10 @@ body {
     justify-content: center;
     
     &-1 {
-      background-image: url(./img/hero-1.jpg);
+      background-image: url(../img/hero-1.jpg);
     }
     &-2 {
-      background-image: url(./img/hero-2.jpg);
+      background-image: url(../img/hero-2.jpg);
     }
     
     * {

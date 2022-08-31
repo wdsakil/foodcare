@@ -73,7 +73,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.5rem;
-  text-shadow: 0 0 1rem green;
 }
 
 .header svg {
@@ -220,11 +219,11 @@ body {
 }
 
 .hero .item-1 {
-  background-image: url(./img/hero-1.jpg);
+  background-image: url(../img/hero-1.jpg);
 }
 
 .hero .item-2 {
-  background-image: url(./img/hero-2.jpg);
+  background-image: url(../img/hero-2.jpg);
 }
 
 .hero .item * {
