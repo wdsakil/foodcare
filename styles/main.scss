@@ -12,33 +12,42 @@ body {
   --fs-xxl: 2rem;
   --fs-xxxl: 4rem;
 }
-//Prevent Default Styles
+
+// Third Party
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300+700&display=swap");
+
+//Default Styles
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   list-style: none;
   text-decoration: none;
+  fill: currentColor;
 }
 a:active,
 a:hover,
 a:focus {
   background-color: transparent;
+  text-decoration: none;
   color: inherit;
+}
+aside{
+  display: none;
 }
 
 // Styles
 body {
   background-color: var(--clr-bg);
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 //Header Styles
 .header {
   background-color: transparent;
   padding-inline: clamp(1.25rem, 3vw, 10rem);
-  padding-block: 0.5rem;
+  padding-block: 1rem;
   position: fixed;
   inset: 0 0 auto 0;
   z-index: auto;
@@ -48,35 +57,51 @@ body {
   // box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   gap: 2rem;
   width: 100%;
+  color: var(--clr-lit);
+
+  * {
+    color: inherit;
+  }
 
   .page-logo {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    text-shadow: 0 0 1rem green;
   }
-  img {
-    height: 2rem;
+  svg {
+    height: 2.125rem;
+    width: 2.125rem;
   }
   h2 {
+    font-family: "Roboto", sans-serif;
     display: inline;
-    margin: 0;
-    color: var(--clr-pri);
-    font-size: var(--fs-xxl);
-    font-weight: 700;
+    font-size: var(--fs-xl);
   }
   .fa-burger {
     font-size: var(--fs-xl);
-    color: var(--clr-pri);
-    border: 0.175rem solid var(--clr-pri);
     border-radius: 0.5rem;
     padding: 0.1rem;
     margin-right: 0.5rem;
-    transition: all 0.2s ease-in-out;
+    transition: all .2s ease-in-out;
     cursor: pointer;
+    // To make the gradient
+    background: linear-gradient(
+      180deg,
+      rgba(223, 196, 7, 1) 0%,
+      rgba(223, 196, 7, 1) 45%,
+      rgba(5, 255, 0, 1) 45%,
+      rgba(5, 255, 0, 1) 70%,
+      rgba(223, 196, 7, 1) 70%,
+      rgba(223, 196, 7, 1) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    // -webkit-text-fill-color: transparent;
 
     &:hover {
-      color: var(--clr-drk);
-      border-color: var(--clr-drk);
+      color: var(--clr-lit);
     }
   }
   .nav {
@@ -101,7 +126,6 @@ body {
 
       & ~ .fa-burger {
         color: var(--clr-drk);
-        border-color: var(--clr-drk);
       }
     }
 
@@ -112,12 +136,12 @@ body {
       padding-block: 0.5rem;
       width: 70vw;
 
-      &:hover{
-        color: var(--clr-pri);
+      &:hover {
+        color: rgba(#000, 0.7);
       }
     }
   }
-// Header Media Queries
+  // Header Media Queries
   @media (min-width: 780px) {
     .nav {
       position: static;
@@ -133,9 +157,12 @@ body {
       transition: all 0s ease 0s;
       a {
         width: auto;
-      color: var(--clr-lit);
+        color: var(--clr-lit);
         padding-inline: 0.75rem;
         padding-block: 0.25rem;
+        &:hover{
+        color: rgba(#fff, 0.7);
+      }
       }
     }
     .fa-burger {
@@ -146,7 +173,7 @@ body {
 
 // Hero Styles
 .hero {
-  .wrapper{
+  .wrapper {
     min-height: 100vh;
     width: 100%;
   }
@@ -157,22 +184,34 @@ body {
     background-size: cover;
     background-position: center bottom;
     color: var(--clr-lit);
-    font-family: 'Poppins', sans-serif;
-    display: grid;
+    display: flex;
     align-items: center;
-
-    .title{
-      font-size:clamp(3rem, 5vw, 5rem);
-      font-weight: 700;
-      line-height: 3.5rem;
-      text-transform: uppercase;
-    }
-
+    justify-content: center;
+    
     &-1 {
       background-image: url(/img/hero-1.jpg);
     }
     &-2 {
       background-image: url(/img/hero-2.jpg);
+    }
+    
+    * {
+      border: #fff 1px solid;
+    }
+    
+    .content {
+      margin: 2rem;
+    }
+    .title {
+      font-size: clamp(3rem, 10vw, 4.5rem);
+      font-family: "Bebas Neue", sans-serif;
+      line-height: 1.1;
+      text-transform: uppercase;
+      text-shadow: 0 0.25rem 0.3rem rgba(#000, 0.3);
+      
+      padding: 0.5rem;
+      margin-block: 0.5rem;
+      width: fit-content;
     }
   }
 }

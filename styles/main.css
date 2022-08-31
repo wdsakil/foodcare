@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300+700&display=swap");
 body {
   --clr-bg: #c8c8c8;
   --clr-pri: #ff0000;
@@ -17,27 +18,32 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   list-style: none;
   text-decoration: none;
+  fill: currentColor;
 }
 
 a:active,
 a:hover,
 a:focus {
   background-color: transparent;
+  text-decoration: none;
   color: inherit;
+}
+
+aside {
+  display: none;
 }
 
 body {
   background-color: var(--clr-bg);
-  overflow-x: hidden;
 }
 
 .header {
   background-color: transparent;
   padding-inline: clamp(1.25rem, 3vw, 10rem);
-  padding-block: 0.5rem;
+  padding-block: 1rem;
   position: fixed;
   inset: 0 0 auto 0;
   z-index: auto;
@@ -52,6 +58,11 @@ body {
           justify-content: space-between;
   gap: 2rem;
   width: 100%;
+  color: var(--clr-lit);
+}
+
+.header * {
+  color: inherit;
 }
 
 .header .page-logo {
@@ -62,35 +73,37 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.5rem;
+  text-shadow: 0 0 1rem green;
 }
 
-.header img {
-  height: 2rem;
+.header svg {
+  height: 2.125rem;
+  width: 2.125rem;
 }
 
 .header h2 {
+  font-family: "Roboto", sans-serif;
   display: inline;
-  margin: 0;
-  color: var(--clr-pri);
-  font-size: var(--fs-xxl);
-  font-weight: 700;
+  font-size: var(--fs-xl);
 }
 
 .header .fa-burger {
   font-size: var(--fs-xl);
-  color: var(--clr-pri);
-  border: 0.175rem solid var(--clr-pri);
   border-radius: 0.5rem;
   padding: 0.1rem;
   margin-right: 0.5rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
   cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dfc407), color-stop(45%, #dfc407), color-stop(45%, #05ff00), color-stop(70%, #05ff00), color-stop(70%, #dfc407), to(#dfc407));
+  background: linear-gradient(180deg, #dfc407 0%, #dfc407 45%, #05ff00 45%, #05ff00 70%, #dfc407 70%, #dfc407 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .header .fa-burger:hover {
-  color: var(--clr-drk);
-  border-color: var(--clr-drk);
+  color: var(--clr-lit);
 }
 
 .header .nav {
@@ -131,7 +144,6 @@ body {
 
 .header .nav.active ~ .fa-burger {
   color: var(--clr-drk);
-  border-color: var(--clr-drk);
 }
 
 .header .nav a {
@@ -144,7 +156,7 @@ body {
 }
 
 .header .nav a:hover {
-  color: var(--clr-pri);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 @media (min-width: 780px) {
@@ -176,6 +188,9 @@ body {
     padding-inline: 0.75rem;
     padding-block: 0.25rem;
   }
+  .header .nav a:hover {
+    color: rgba(255, 255, 255, 0.7);
+  }
   .header .fa-burger {
     display: none;
   }
@@ -193,19 +208,15 @@ body {
   background-size: cover;
   background-position: center bottom;
   color: var(--clr-lit);
-  font-family: 'Poppins', sans-serif;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.hero .item .title {
-  font-size: clamp(3rem, 5vw, 5rem);
-  font-weight: 700;
-  line-height: 3.5rem;
-  text-transform: uppercase;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hero .item-1 {
@@ -214,6 +225,27 @@ body {
 
 .hero .item-2 {
   background-image: url(/img/hero-2.jpg);
+}
+
+.hero .item * {
+  border: #fff 1px solid;
+}
+
+.hero .item .content {
+  margin: 2rem;
+}
+
+.hero .item .title {
+  font-size: clamp(3rem, 10vw, 4.5rem);
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-shadow: 0 0.25rem 0.3rem rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  margin-block: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media print {
