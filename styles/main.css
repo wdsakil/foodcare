@@ -21,6 +21,10 @@ body {
   font-family: "Roboto", sans-serif;
   list-style: none;
   text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   fill: currentColor;
 }
 
@@ -38,6 +42,7 @@ aside {
 
 body {
   background-color: var(--clr-bg);
+  overflow-x: hidden;
 }
 
 .header {
@@ -141,6 +146,13 @@ body {
           transform: translateX(-100%);
 }
 
+@media (min-width: 780px) {
+  .header .nav.active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 .header .nav.active ~ .fa-burger {
   color: var(--clr-drk);
 }
@@ -176,8 +188,6 @@ body {
     padding-top: 0;
     width: 50vw;
     overflow-y: visible;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
     -webkit-transition: all 0s ease 0s;
     transition: all 0s ease 0s;
   }

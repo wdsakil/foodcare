@@ -24,6 +24,7 @@ body {
   font-family: "Roboto", sans-serif;
   list-style: none;
   text-decoration: none;
+  user-select: none;
   fill: currentColor;
 }
 a:active,
@@ -40,7 +41,7 @@ aside{
 // Styles
 body {
   background-color: var(--clr-bg);
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 //Header Styles
@@ -122,6 +123,9 @@ body {
 
     &.active {
       transform: translateX(-100%);
+      @media (min-width: 780px){
+        transform: translateX(0);
+      }
 
       & ~ .fa-burger {
         color: var(--clr-drk);
@@ -152,7 +156,6 @@ body {
       padding-top: 0;
       width: 50vw;
       overflow-y: visible;
-      transform: translateX(0);
       transition: all 0s ease 0s;
       a {
         width: auto;
