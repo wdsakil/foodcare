@@ -82,13 +82,20 @@ body {
   gap: 2rem;
   width: 100%;
   color: var(--clr-lit);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
-.header * {
-  color: inherit;
+.header.sticky {
+  color: var(--clr-pri);
+  padding-block: 0.5rem;
+  background-color: var(--clr-lit);
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
 
 .header .page-logo {
+  color: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,21 +108,24 @@ body {
 .header svg {
   height: 2.125rem;
   width: 2.125rem;
+  color: inherit;
 }
 
 .header h2 {
+  color: inherit;
   font-family: "Roboto", sans-serif;
   display: inline;
   font-size: var(--fs-xl);
 }
 
 .header .fa-burger {
+  z-index: 100;
   font-size: var(--fs-xl);
   border-radius: 0.5rem;
   padding: 0.1rem;
   margin-right: 0.5rem;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
   background: -webkit-gradient(linear, left top, left bottom, from(#dfc407), color-stop(45%, #dfc407), color-stop(45%, #05ff00), color-stop(70%, #05ff00), color-stop(70%, #dfc407), to(#dfc407));
   background: linear-gradient(180deg, #dfc407 0%, #dfc407 45%, #05ff00 45%, #05ff00 70%, #dfc407 70%, #dfc407 100%);
@@ -176,15 +186,15 @@ body {
 
 .header .nav a {
   text-align: center;
-  color: var(--clr-drk);
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
   padding-block: 0.5rem;
   width: 70vw;
+  color: var(--clr-drk);
 }
 
 .header .nav a:hover {
-  color: rgba(0, 0, 0, 0.7);
+  opacity: 0.75;
 }
 
 @media (min-width: 780px) {
@@ -209,16 +219,17 @@ body {
     transition: all 0s ease 0s;
   }
   .header .nav a {
+    font-weight: 300;
     width: auto;
-    color: var(--clr-lit);
     padding-inline: 0.75rem;
     padding-block: 0.25rem;
-  }
-  .header .nav a:hover {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--clr-lit);
   }
   .header .fa-burger {
     display: none;
+  }
+  .header.sticky a {
+    color: var(--clr-drk);
   }
 }
 
@@ -275,7 +286,7 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: .75rem;
+  padding: 0.75rem;
   margin-top: 0.5rem;
 }
 
@@ -288,7 +299,7 @@ body {
 .hero .item .subtitle {
   font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: 300;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-top: 0.5rem;
 }
 

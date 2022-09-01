@@ -1,6 +1,7 @@
 //Navigation scripts
-const burger = document.querySelector('.fa-burger')
+const header = document.querySelector('.header')
 const nav = document.querySelector('.nav')
+const burger = document.querySelector('.fa-burger')
 const backdrop = document.querySelector('.backdrop')
 
 function deActivateNav() {
@@ -36,4 +37,10 @@ nav.addEventListener('click', (e) => {
     if ((e.target.tagName == 'A') || (e.target.tagName == 'SPAN')) {
         deActivateNavIfActivated()
     }
+})
+
+// Sticky Header Codes
+
+window.addEventListener('scroll', ()=>{
+    header.classList.toggle('sticky', window.scrollY > 0)
 })
