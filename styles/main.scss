@@ -61,7 +61,7 @@ body {
   background-color: var(--clr-bg);
   overflow-x: hidden;
   height: 100%;
-  width: 100%;
+  width: 150%;
 }
 
 //Header Styles
@@ -97,7 +97,7 @@ body {
       color: inherit;
       font-size: var(--fs-xl);
     }
-    .brand-name{
+    .brand-name {
       font-family: "Roboto", sans-serif;
     }
   }
@@ -200,8 +200,14 @@ body {
 
 // Hero Styles
 .hero {
- 
+  width: 100vw;
+  overflow: hidden;
+  .wrapper {
+    width: 100vw;
+    overflow: hidden;
+  }
   .item {
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
     text-align: center;
@@ -264,7 +270,7 @@ body {
       cursor: pointer;
       transition: all 0.2s ease-in-out;
 
-      i{
+      i {
         padding-right: 0.3rem;
       }
 
@@ -272,29 +278,29 @@ body {
         background-color: rgba(#000000, 0.4);
       }
       &:hover {
-        box-shadow: 0 .25rem .5rem #0003;
+        box-shadow: 0 0.25rem 0.5rem #0003;
       }
       &:active {
-        box-shadow:inset 0 5px 0 #0004;
+        box-shadow: inset 0 5px 0 #0004;
       }
     }
   }
 }
 
 // Swiper Styles
-.swiper-btn{
-display: none;
+.swiper-btn {
+  display: none;
 }
-.swiper-pagination-bullet{
-  height: .75rem;
-  width: .75rem;
+.swiper-pagination-bullet {
+  height: 0.75rem;
+  width: 0.75rem;
   border-radius: 10rem;
   background-color: var(--clr-lit);
   background-color: var(--clr-bg);
   opacity: 0.5;
   transition: all 0.3s ease-in-out;
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   opacity: 1;
   width: 1.5rem;
 }

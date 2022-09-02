@@ -61,7 +61,7 @@ body {
   background-color: var(--clr-bg);
   overflow-x: hidden;
   height: 100%;
-  width: 100%;
+  width: 150%;
 }
 
 .header {
@@ -177,7 +177,16 @@ body {
   }
 }
 
+.hero {
+  width: 100vw;
+  overflow: hidden;
+}
+.hero .wrapper {
+  width: 100vw;
+  overflow: hidden;
+}
 .hero .item {
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   text-align: center;
