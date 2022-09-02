@@ -23,6 +23,10 @@ body {
   fill: currentColor;
 }
 
+*:focus, *:focus-visible {
+  outline: var(--clr-pri) solid 2px;
+}
+
 a:active,
 a:hover,
 a:focus {
@@ -259,7 +263,7 @@ body {
 .hero .item .btn:hover {
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
 }
-.hero .item .btn:active {
+.hero .item .btn:active, .hero .item .btn:focus {
   box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.2666666667);
 }
 

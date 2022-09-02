@@ -26,6 +26,9 @@ body {
   text-decoration: none;
   fill: currentColor;
 }
+*:focus,*:focus-visible{
+outline: var(--clr-pri) solid 2px;
+}
 a:active,
 a:hover,
 a:focus {
@@ -288,9 +291,9 @@ body {
         background-color: rgba(#000000, 0.4);
       }
       &:hover {
-        box-shadow: 0 0.25rem 0.5rem #0003;
+        box-shadow:0 0.25rem 0.5rem #0003;
       }
-      &:active {
+      &:active, &:focus {
         box-shadow: inset 0 5px 0 #0004;
       }
     }
