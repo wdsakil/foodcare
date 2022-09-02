@@ -59,6 +59,7 @@ aside svg {
 
 body {
   background-color: var(--clr-bg);
+  overflow-x: hidden;
 }
 
 .header {
@@ -176,12 +177,16 @@ body {
   }
 }
 
-.hero .wrapper {
+.hero {
+  width: 100vw;
   min-height: 100vh;
+}
+.hero .wrapper {
   width: 100%;
+  min-height: 100vh;
 }
 .hero .item {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   text-align: center;
   background-size: cover;
@@ -257,6 +262,25 @@ body {
 }
 .hero .item .btn:active {
   box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.2666666667);
+}
+
+.swiper-btn {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 10rem;
+  background-color: var(--clr-lit);
+  background-color: var(--clr-bg);
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 1.5rem;
 }
 
 @media print {
