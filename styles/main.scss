@@ -84,22 +84,19 @@ body {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   }
 
-  .page-logo {
+  .brand {
     color: inherit;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-  }
-  svg {
-    height: 2.125rem;
-    width: 2.125rem;
-    color: inherit;
-  }
-  h2 {
-    color: inherit;
-    font-family: "Roboto", sans-serif;
-    display: inline;
-    font-size: var(--fs-xl);
+
+    * {
+      color: inherit;
+      font-size: var(--fs-xl);
+    }
+    .brand-name{
+      font-family: "Roboto", sans-serif;
+    }
   }
   .fa-burger {
     z-index: 100;
@@ -267,6 +264,10 @@ body {
       background-color: var(--clr-pri);
       cursor: pointer;
       transition: all 0.2s ease-in-out;
+
+      i{
+        padding-right: 0.3rem;
+      }
 
       &.alt {
         background-color: rgba(#000000, 0.5);
