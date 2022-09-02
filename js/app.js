@@ -9,33 +9,28 @@ function deActivateNav() {
     backdrop.classList.remove("active")
 }
 function activateNav() {
+    header.classList.add('sticky')
     nav.classList.add('active')
     backdrop.classList.add("active")
 }
-function deActivateNavIfActivated() {
-    if (nav.classList.contains('active')) {
-        deActivateNav()
-        return
-    }
+function toggleNav(){
+    header.classList.add('sticky')
+    nav.classList.toggle('active')
+    backdrop.classList.toggle("active")
 }
 
 burger.addEventListener('click', () => {
-    if (nav.classList.contains('active')) {
-        deActivateNav()
-        return
-    } else {
-        activateNav()
-    }
+    toggleNav()
 })
 
 backdrop.addEventListener('click', () => {
-    deActivateNavIfActivated()
-
+    deActivateNav()
+    
 })
 
 nav.addEventListener('click', (e) => {
     if ((e.target.tagName == 'A') || (e.target.tagName == 'SPAN')) {
-        deActivateNavIfActivated()
+        deActivateNav()
     }
 })
 
