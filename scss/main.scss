@@ -1,0 +1,364 @@
+//Variables
+body {
+    --clr-bg: #c8c8c8;
+    --clr-pri: #ff0000;
+    --clr-lit: #fff;
+    --clr-drk: #000;
+    --fs-xs: 1rem;
+    --fs-s: 1.125rem;
+    --fs-m: 1.25rem;
+    --fs-l: 1.5rem;
+    --fs-xl: 1.75rem;
+    --fs-xxl: 2rem;
+    --fs-xxxl: 4rem;
+  }
+  
+  // Third Party
+  @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap");
+  
+  //Default Styles
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    fill: currentColor;
+  }
+  
+  a:active,
+  a:hover,
+  a:focus {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+  }
+  aside {
+    svg {
+      display: none;
+    }
+  }
+  .backdrop {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    background-color: var(--clr-drk);
+  }
+  .backdrop.active {
+    visibility: visible;
+    opacity: 0.75;
+  }
+  
+  // Styles
+  body {
+    background-color: var(--clr-bg);
+    overflow-x: hidden;
+    // overflow-y: hidden;
+    width: 100%;
+    min-height: 200vh;
+  }
+  
+  //Header Styles
+  .header {
+    background-color: transparent;
+    padding-inline: clamp(1.25rem, 3vw, 10rem);
+    padding-block: 1rem;
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    color: var(--clr-lit);
+    transition: all 0.4s ease-in-out;
+  
+    &.sticky {
+      color: var(--clr-pri);
+      padding-block: 0.5rem;
+      background-color: var(--clr-lit);
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    }
+  
+    .brand {
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+  
+      * {
+        color: inherit;
+        font-size: var(--fs-xl);
+      }
+      .brand-name {
+        font-family: "Roboto", sans-serif;
+      }
+    }
+    .fa-burger {
+      z-index: 100;
+      font-size: var(--fs-xl);
+      border-radius: 0.5rem;
+      padding: 0.1rem;
+      margin-right: 0.5rem;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      // To make the gradient
+      background: linear-gradient(
+        180deg,
+        rgba(223, 196, 7, 1) 0%,
+        rgba(223, 196, 7, 1) 45%,
+        rgba(5, 255, 0, 1) 45%,
+        rgba(5, 255, 0, 1) 70%,
+        rgba(223, 196, 7, 1) 70%,
+        rgba(223, 196, 7, 1) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      // -webkit-text-fill-color: transparent;
+  
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .nav {
+      font-size: var(--fs-m);
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      background-color: white;
+      padding-top: 10rem;
+      overflow-y: auto;
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
+  
+      &.active {
+        transform: translateX(-100%);
+        @media (min-width: 780px) {
+          transform: translateX(0);
+        }
+  
+        & ~ .fa-burger {
+          // color: var(--clr-drk);
+  
+          // Decorated
+          background: linear-gradient(
+            180deg,
+            rgba(223, 196, 7, 1) 0%,
+            rgba(223, 196, 7, 1) 45%,
+            rgba(0, 0, 0, 0.5) 45%,
+            rgba(0, 0, 0, 0.5) 70%,
+            rgba(223, 196, 7, 1) 70%,
+            rgba(223, 196, 7, 1) 100%
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+      }
+  
+      a {
+        text-align: center;
+        transition: color 0.2s ease-in-out;
+        padding-block: 0.5rem;
+        width: 70vw;
+        color: var(--clr-drk);
+  
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+    }
+    // Header Media Queries
+    @media (min-width: 780px) {
+      .nav {
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        z-index: auto;
+        background-color: transparent;
+        padding-top: 0;
+        overflow-y: visible;
+        transition: all 0s ease 0s;
+        a {
+          font-weight: 300;
+          width: auto;
+          padding-inline: 0.75rem;
+          padding-block: 0.25rem;
+          color: var(--clr-lit);
+        }
+      }
+      .fa-burger {
+        display: none;
+      }
+  
+      &.sticky {
+        .nav a {
+          color: var(--clr-drk);
+        }
+      }
+    }
+  }
+  
+  // For All Sections
+  section {
+    // Default Button Styles
+    .btn {
+      position: relative;
+      font-size: 1.1rem;
+      font-weight: 400;
+      padding: 0.75rem 2rem;
+      color: var(--clr-lit);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      display: inline-block;
+  
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 70%;
+        border-radius: 0.7rem;
+        background: var(--clr-pri);
+        z-index: -1;
+      }
+      &::before {
+        left: 0;
+        right: auto;
+      }
+      &::after {
+        left: auto;
+        right: 0;
+        -webkit-transform: skewX(-20deg);
+        -moz-transform: skewX(-20deg);
+        -o-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+        transform: skewX(-20deg);
+      }
+      
+          &.alt {
+            &::before {
+              background: var(--clr-pri);
+              left: auto;
+              right: 0;
+            }
+            &::after {
+              background: var(--clr-pri);
+              left: 0;
+              right: auto;
+            }
+          }
+  
+          &:hover::before,
+          &:hover::after {
+            // background: green;
+            filter: brightness(0.94);
+          }
+          i {
+            padding-right: 0.3rem;
+          }
+    }
+  }
+  
+  // Hero Styles
+  .hero {
+    width: 100vw;
+    overflow: hidden;
+    .item {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+      background-size: cover;
+      background-position: center bottom;
+      color: var(--clr-lit);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      &-1 {
+        background-image: url(../img/hero-1.jpg);
+      }
+      &-2 {
+        background-image: url(../img/hero-2.jpg);
+      }
+  
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .title {
+        font-size: clamp(3rem, 10vw, 4.5rem);
+        font-family: "Bebas Neue", sans-serif;
+        line-height: 1.1;
+        text-transform: uppercase;
+        text-shadow: 0 0.25rem 0.3rem rgba(#000, 0.3);
+        width: fit-content;
+        padding: 0.75rem;
+        margin-top: 0.5rem;
+  
+        @media (max-width: 450px) {
+          font-size: 3.5rem;
+        }
+      }
+      .subtitle {
+        font-size: clamp(1rem, 3vw, 1.25rem);
+        font-weight: 300;
+        font-family: "Roboto", sans-serif;
+        margin-top: 0.5rem;
+      }
+      .btns {
+        margin-top: 2rem;
+        display: flex;
+        gap: 2rem;
+  
+        @media (max-width: 450px) {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+  
+  // Swiper Styles
+  .swiper-pagination-bullet {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 10rem;
+    background-color: var(--clr-lit);
+    background-color: var(--clr-bg);
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 1.5rem;
+  }
+  
+  // Basic Media Queries
+  
+  @media print {
+    .header {
+      justify-content: center;
+  
+      & > *:not(.page-logo) {
+        display: none;
+      }
+    }
+  }
