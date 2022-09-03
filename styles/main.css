@@ -180,26 +180,49 @@ body {
 }
 
 section .btn {
+  position: relative;
   font-size: 1.1rem;
   font-weight: 400;
   padding: 0.75rem 2rem;
-  border-radius: 10rem;
   color: var(--clr-lit);
-  background-color: var(--clr-pri);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+section .btn::before, section .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 70%;
+  border-radius: 0.7rem;
+  background: var(--clr-pri);
+  z-index: -1;
+}
+section .btn::before {
+  left: 0;
+  right: auto;
+}
+section .btn::after {
+  left: auto;
+  right: 0;
+  transform: skewX(-20deg);
+}
+section .btn.alt::before {
+  background: var(--clr-pri);
+  left: auto;
+  right: 0;
+}
+section .btn.alt::after {
+  background: var(--clr-pri);
+  left: 0;
+  right: auto;
+}
+section .btn:hover::before, section .btn:hover::after {
+  filter: brightness(0.94);
 }
 section .btn i {
   padding-right: 0.3rem;
-}
-section .btn.alt {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-section .btn:hover {
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-}
-section .btn:active {
-  box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.2666666667);
 }
 
 .hero {
@@ -286,28 +309,4 @@ section .btn:active {
   .header > *:not(.page-logo) {
     display: none;
   }
-}
-.btn {
-  position: relative;
-}
-.btn ::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -13px;
-  width: 80%;
-  height: 100%;
-  border-radius: 10px;
-  background: orange;
-}
-.btn ::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 10px;
-  background: orange;
-  transform: skewX 15deg;
 }/*# sourceMappingURL=main.css.map */
