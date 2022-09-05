@@ -460,8 +460,7 @@ section.about {
       min-width: 200px;
       border-radius: .5rem;
       aspect-ratio: 4 / 3;
-      transition: all 0.3s ease-in-out;
-      border: 2px solid #fff0;
+      transition: all 0.2s ease-in-out;
       &:hover{
         transform: scale(1.5);
       }
