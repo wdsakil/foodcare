@@ -42,7 +42,7 @@ a:focus {
   text-decoration: none;
   color: inherit;
 }
-*::selection{
+*::selection {
   color: var(--clr-lit);
   background: var(--clr-pri);
 }
@@ -67,7 +67,7 @@ a:focus {
     visibility: visible;
     opacity: 0.75;
   }
-  .dialogue{
+  .dialogue {
     opacity: 0;
     visibility: hidden;
     font-size: 2rem;
@@ -86,7 +86,7 @@ a:focus {
     justify-content: center;
     background-color: #0009;
     transition: all 0.2s ease-in-out;
-    &.active{
+    &.active {
       visibility: visible;
       opacity: 1;
     }
@@ -419,17 +419,17 @@ section.hero {
 // -----------------------------
 section.about {
   position: relative;
-  &::before{
-    content: '';
+  &::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background: fixed url(../img/demo.jpg) no-repeat;
+    background: url(../img/demo.jpg) no-repeat fixed;
     background-color: red;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.4;
   }
   .wrapper {
     padding-inline: 1.5rem;
@@ -452,46 +452,48 @@ section.about {
 
     @media (min-width: 600px) {
       grid-template-columns: 1fr 1fr;
+      transition: all 0.2s ease-in-out;
+      img {
+        &:hover {
+          transform: scale(1.5);
+        }
+        &:nth-child(1) {
+          transform-origin: top left;
+        }
+        &:nth-child(2) {
+          transform-origin: top right;
+        }
+        &:nth-child(3) {
+          transform-origin: bottom left;
+        }
+        &:nth-child(4) {
+          transform-origin: bottom right;
+        }
+        &:nth-child(1):hover {
+          border-bottom: 2px solid white;
+          border-right: 2px solid white;
+        }
+        &:nth-child(2):hover {
+          border-bottom: 2px solid white;
+          border-left: 2px solid white;
+        }
+        &:nth-child(3):hover {
+          border-top: 2px solid white;
+          border-right: 2px solid white;
+        }
+        &:nth-child(4):hover {
+          border-top: 2px solid white;
+          border-left: 2px solid white;
+        }
+      }
     }
 
     .img {
       background-image: url(../img/demo.jpg);
       background-size: cover;
       min-width: 200px;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       aspect-ratio: 4 / 3;
-      transition: all 0.2s ease-in-out;
-      &:hover{
-        transform: scale(1.5);
-      }
-      &:nth-child(1){
-        transform-origin: top left;
-      }
-      &:nth-child(2){
-        transform-origin: top right;
-      }
-      &:nth-child(3){
-        transform-origin: bottom left;
-      }
-      &:nth-child(4){
-        transform-origin: bottom right;
-      }
-      &:nth-child(1):hover{
-        border-bottom: 2px solid white;
-        border-right: 2px solid white;
-      }
-      &:nth-child(2):hover{
-        border-bottom: 2px solid white;
-        border-left: 2px solid white;
-      }
-      &:nth-child(3):hover{
-        border-top: 2px solid white;
-        border-right: 2px solid white;
-      }
-      &:nth-child(4):hover{
-        border-top: 2px solid white;
-        border-left: 2px solid white;
-      }
     }
   }
   .paragraph {
@@ -508,7 +510,9 @@ section.about {
       }
     }
   }
-  .btn{margin-top: 1.5rem;}
+  .btn {
+    margin-top: 1.5rem;
+  }
 }
 // --------About Section--------
 // -----------------------------
@@ -529,10 +533,10 @@ section.specials {
     @media (min-width: 576px) {
       grid-template-columns: 1fr 1fr;
     }
-    @media (min-width: 800px){
+    @media (min-width: 800px) {
       grid-template-columns: 1fr 1fr 1fr;
     }
-    @media (min-width: 1000px){
+    @media (min-width: 1000px) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
   }
@@ -543,9 +547,9 @@ section.specials {
     overflow: hidden;
     box-shadow: 0 5px 5px #0002;
     transition: translate 0.1s ease-in-out;
-    &:hover{
+    &:hover {
       box-shadow: 0 5px 8px #0005;
-      translate:0 -4px;
+      translate: 0 -4px;
     }
   }
   img {

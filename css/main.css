@@ -370,10 +370,10 @@ section.about::before {
   left: 0;
   height: 100%;
   width: 100%;
-  background: fixed url(../img/demo.jpg) no-repeat;
+  background: url(../img/demo.jpg) no-repeat fixed;
   background-color: red;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 section.about .wrapper {
   padding-inline: 1.5rem;
@@ -398,6 +398,38 @@ section.about .pics {
 @media (min-width: 600px) {
   section.about .pics {
     grid-template-columns: 1fr 1fr;
+    transition: all 0.2s ease-in-out;
+  }
+  section.about .pics img:hover {
+    transform: scale(1.5);
+  }
+  section.about .pics img:nth-child(1) {
+    transform-origin: top left;
+  }
+  section.about .pics img:nth-child(2) {
+    transform-origin: top right;
+  }
+  section.about .pics img:nth-child(3) {
+    transform-origin: bottom left;
+  }
+  section.about .pics img:nth-child(4) {
+    transform-origin: bottom right;
+  }
+  section.about .pics img:nth-child(1):hover {
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+  }
+  section.about .pics img:nth-child(2):hover {
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+  }
+  section.about .pics img:nth-child(3):hover {
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+  }
+  section.about .pics img:nth-child(4):hover {
+    border-top: 2px solid white;
+    border-left: 2px solid white;
   }
 }
 section.about .pics .img {
@@ -406,38 +438,6 @@ section.about .pics .img {
   min-width: 200px;
   border-radius: 0.5rem;
   aspect-ratio: 4/3;
-  transition: all 0.2s ease-in-out;
-}
-section.about .pics .img:hover {
-  transform: scale(1.5);
-}
-section.about .pics .img:nth-child(1) {
-  transform-origin: top left;
-}
-section.about .pics .img:nth-child(2) {
-  transform-origin: top right;
-}
-section.about .pics .img:nth-child(3) {
-  transform-origin: bottom left;
-}
-section.about .pics .img:nth-child(4) {
-  transform-origin: bottom right;
-}
-section.about .pics .img:nth-child(1):hover {
-  border-bottom: 2px solid white;
-  border-right: 2px solid white;
-}
-section.about .pics .img:nth-child(2):hover {
-  border-bottom: 2px solid white;
-  border-left: 2px solid white;
-}
-section.about .pics .img:nth-child(3):hover {
-  border-top: 2px solid white;
-  border-right: 2px solid white;
-}
-section.about .pics .img:nth-child(4):hover {
-  border-top: 2px solid white;
-  border-left: 2px solid white;
 }
 section.about .paragraph {
   font-size: 1rem;
