@@ -76,6 +76,10 @@ const addToCartBtns = document.querySelectorAll('.btn.add-to-cart')
 for (const btn of addToCartBtns){
     btn.addEventListener('click', underDevelopment)
 }
-// To close Under-development
+// preloader
+onload = (event) => {
+    const preloader = document.querySelector('.pre-loader')
+    preloader.classList.add('hidden')
+};
 
 
