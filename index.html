@@ -16,10 +16,6 @@
 </head>
 
 <body>
-    <aside>
-        <div class="backdrop"></div>
-    </aside>
-    
     <header class="header">
         <a class="brand" href="./">
             <i class="brand-icon fa-solid fa-utensils"></i>
@@ -52,10 +48,10 @@
                     <div class="title">Foodcare Restaurant</div>
                     <div class="subtitle">Always ready to make you lick your fingers.</div>
                     <div class="btns">
-                        <a href="tel:+8801300000000" class="btn"><i class="fa-solid fa-phone"></i><span>Order
+                        <a class="btn" href="tel:+8801300000000"><i class="fa-solid fa-phone"></i><span>Order
                                 Now</span></a>
-                        <a href="https://www.google.com/maps/dir/?api=1&destination=Food+Care+Restaurant+%26+Party+Centre,+Robir+Bazar+Jama+Masjid"
-                            target="_blank" class="btn alt"><i class="fa-solid fa-location-arrow"></i><span>Take
+                        <a class="btn alt" href="https://www.google.com/maps/dir/?api=1&destination=Food+Care+Restaurant+%26+Party+Centre,+Robir+Bazar+Jama+Masjid"
+                            target="_blank"><i class="fa-solid fa-location-arrow"></i><span>Take
                                 Away</span></a>
                     </div>
                 </div>
@@ -76,24 +72,25 @@
             </div>
         </div>
         <div class="swiper-pagination"></div>
-        <!-- <div class="swiper-btn swiper-button-next"></div>
-        <div class="swiper-btn swiper-button-prev"></div> -->
 
     </section>
 
     <section class="about">
         <div class="wrapper">
             <div class="texts">
-                <div class="pre-head">We Are</div>
-                <div class="head">The Foodcare Restaurant and Party Center</div>
+                <div class="head-wrapper">
+                    <div class="pre-head">We Are</div>
+                    <div class="head">The Foodcare Restaurant and Party Center</div>
+                </div>
                 <div class="paragraph">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi mollitia officia illum.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quibusdam vero commodi
-                        delectus culpa nihil, assumenda, minima reiciendis recusandae dolore qui doloribus quod error
+                        delectus <span class="strong">culpa nihil, assumenda, minima reiciendis</span> recusandae dolore
+                        qui doloribus quod error
                         inventore odio molestias illum similique libero!</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, harum.</p>
                 </div>
-                <div class="btn">Read More</div>
+                <a href="#card1" class="btn">Read More</a>
             </div>
             <div class="pics">
                 <div class="img img1"></div>
@@ -106,132 +103,223 @@
     <hr>
 
     <section class="specials">
-        <div class="pre-head">Hot Sales</div>
-        <div class="head">Special Dishes</div>
-        <div class="cards">
-            <div class="card card1">
-                <div class="pic"></div>
-                <div class="title"></div>
-                <div class="pricing"><span class="old">200</span><span class="new">100</span></div>
-                <div class="btn"><span>Order Now</span></div>
+        <div class="wrapper">
+            <div class="head-wrapper">
+                <div class="pre-head">Hot Sales</div>
+                <div class="head">Special Dishes</div>
             </div>
-            <div class="card card2">
-                <div class="pic"></div>
-                <div class="title"></div>
-                <div class="pricing"><span class="old">200</span><span class="new">100</span></div>
-                <div class="btn"><span>Order Now</span></div>
-            </div>
-            <div class="card card3">
-                <div class="pic"></div>
-                <div class="title"></div>
-                <div class="pricing"><span class="old">200</span><span class="new">100</span></div>
-                <div class="btn"><span>Order Now</span></div>
-            </div>
-            <div class="card card4">
-                <div class="pic"></div>
-                <div class="title"></div>
-                <div class="pricing"><span class="old">200</span><span class="new">100</span></div>
-                <div class="btn"><span>Order Now</span></div>
-            </div>
-            <div class="card card5">
-                <div class="pic"></div>
-                <div class="title"></div>
-                <div class="pricing"><span class="old">200</span><span class="new">100</span></div>
-                <div class="btn"><span>Order Now</span></div>
-            </div>
-            <div class="card card6">
-                <div class="pic"></div>
-                <div class="title"></div>
-                <div class="pricing"><span class="old">200</span><span class="new">100</span></div>
-                <div class="btn"><span>Order Now</span></div>
-            </div>
-            <div class="card card7">
-                <div class="pic"></div>
-                <div class="title"></div>
-                <div class="pricing"><span class="old">200</span><span class="new">100</span></div>
-                <div class="btn"><span>Order Now</span></div>
-            </div>
-            <div class="card card8">
-                <div class="pic"></div>
-                <div class="title"></div>
-                <div class="pricing"><span class="old">200</span><span class="new">100</span></div>
-                <div class="btn"><span>Order Now</span></div>
+            <div class="cards">
+                <div class="card card1" id="card1">
+                    <img src="./img/demo.jpg" alt="Item 1">
+                    <div class="title">This is Title</div>
+                    <div class="pricing"><s>200</s><span class="new">100</span></div>
+                    <div class="btns">
+                        <div class="btn order-now">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Order Now</span>
+                        </div>
+                        <div class="btn alt add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Add to Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card2">
+                    <img src="./img/demo.jpg" alt="Item 2">
+                    <div class="title">This is Title</div>
+                    <div class="pricing"><s>200</s><span class="new">100</span></div>
+                    <div class="btns">
+                        <div class="btn order-now">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Order Now</span>
+                        </div>
+                        <div class="btn alt add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Add to Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card3">
+                    <img src="./img/demo.jpg" alt="Item 3">
+                    <div class="title">This is Title</div>
+                    <div class="pricing"><s>200</s><span class="new">100</span></div>
+                    <div class="btns">
+                        <div class="btn order-now">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Order Now</span>
+                        </div>
+                        <div class="btn alt add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Add to Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card4">
+                    <img src="./img/demo.jpg" alt="Item 4">
+                    <div class="title">This is Title</div>
+                    <div class="pricing"><s>200</s><span class="new">100</span></div>
+                    <div class="btns">
+                        <div class="btn order-now">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Order Now</span>
+                        </div>
+                        <div class="btn alt add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Add to Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card5">
+                    <img src="./img/demo.jpg" alt="Item 5">
+                    <div class="title">This is Title</div>
+                    <div class="pricing"><s>200</s><span class="new">100</span></div>
+                    <div class="btns">
+                        <div class="btn order-now">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Order Now</span>
+                        </div>
+                        <div class="btn alt add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Add to Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card6">
+                    <img src="./img/demo.jpg" alt="Item 6">
+                    <div class="title">This is Title</div>
+                    <div class="pricing"><s>200</s><span class="new">100</span></div>
+                    <div class="btns">
+                        <div class="btn order-now">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Order Now</span>
+                        </div>
+                        <div class="btn alt add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Add to Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card7">
+                    <img src="./img/demo.jpg" alt="Item 7">
+                    <div class="title">This is Title</div>
+                    <div class="pricing"><s>200</s><span class="new">100</span></div>
+                    <div class="btns">
+                        <div class="btn order-now">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Order Now</span>
+                        </div>
+                        <div class="btn alt add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Add to Cart</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card8">
+                    <img src="./img/demo.jpg" alt="Item 8">
+                    <div class="title">This is Title</div>
+                    <div class="pricing"><s>200</s><span class="new">100</span></div>
+                    <div class="btns">
+                        <div class="btn order-now">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>Order Now</span>
+                        </div>
+                        <div class="btn alt add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Add to Cart</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <hr>
 
     <section class="platters">
-        <div class="pre-head">Delicious Meals</div>
-        <div class="head">Regular Items</div>
-        <div class="cards">
-            <div class="card card1">
-                <div class="item">
-                    <div class="item-name">Lorem Ipsum</div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-                    <div class="timing">Lunch Deal</div>
-                </div>
-                <div class="pricing">200</div>
+        <div class="wrapper">
+            <div class="head-wrapper">
+                <div class="pre-head">Delicious Meals</div>
+                <div class="head">Regular Items</div>
             </div>
-            <div class="card card2">
-                <div class="item">
-                    <div class="item-name">Lorem Ipsum</div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-                    <div class="timing">Lunch Deal</div>
+            <div class="cards">
+                <div class="card card1">
+                    <div class="item">
+                        <div class="item-name">Lorem Ipsum</div>
+                        <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
+                        <div class="timing">Lunch Deal</div>
+                    </div>
+                    <div class="pricing">200</div>
                 </div>
-                <div class="pricing">200</div>
-            </div>
-            <div class="card card3">
-                <div class="item">
-                    <div class="item-name">Lorem Ipsum</div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-                    <div class="timing">Lunch Deal</div>
+                <div class="card card2">
+                    <div class="item">
+                        <div class="item-name">Lorem Ipsum</div>
+                        <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
+                        <div class="timing">Lunch Deal</div>
+                    </div>
+                    <div class="pricing">200</div>
                 </div>
-                <div class="pricing">200</div>
-            </div>
-            <div class="card card4">
-                <div class="item">
-                    <div class="item-name">Lorem Ipsum</div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-                    <div class="timing">Lunch Deal</div>
+                <div class="card card3">
+                    <div class="item">
+                        <div class="item-name">Lorem Ipsum</div>
+                        <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
+                        <div class="timing">Lunch Deal</div>
+                    </div>
+                    <div class="pricing">200</div>
                 </div>
-                <div class="pricing">200</div>
-            </div>
-            <div class="card card5">
-                <div class="item">
-                    <div class="item-name">Lorem Ipsum</div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-                    <div class="timing">Lunch Deal</div>
+                <div class="card card4">
+                    <div class="item">
+                        <div class="item-name">Lorem Ipsum</div>
+                        <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
+                        <div class="timing">Lunch Deal</div>
+                    </div>
+                    <div class="pricing">200</div>
                 </div>
-                <div class="pricing">200</div>
-            </div>
-            <div class="card card6">
-                <div class="item">
-                    <div class="item-name">Lorem Ipsum</div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-                    <div class="timing">Lunch Deal</div>
+                <div class="card card5">
+                    <div class="item">
+                        <div class="item-name">Lorem Ipsum</div>
+                        <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
+                        <div class="timing">Lunch Deal</div>
+                    </div>
+                    <div class="pricing">200</div>
                 </div>
-                <div class="pricing">200</div>
-            </div>
-            <div class="card card7">
-                <div class="item">
-                    <div class="item-name">Lorem Ipsum</div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-                    <div class="timing">Lunch Deal</div>
+                <div class="card card6">
+                    <div class="item">
+                        <div class="item-name">Lorem Ipsum</div>
+                        <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
+                        <div class="timing">Lunch Deal</div>
+                    </div>
+                    <div class="pricing">200</div>
                 </div>
-                <div class="pricing">200</div>
-            </div>
-            <div class="card card8">
-                <div class="item">
-                    <div class="item-name">Lorem Ipsum</div>
-                    <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
-                    <div class="timing">Lunch Deal</div>
+                <div class="card card7">
+                    <div class="item">
+                        <div class="item-name">Lorem Ipsum</div>
+                        <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
+                        <div class="timing">Lunch Deal</div>
+                    </div>
+                    <div class="pricing">200</div>
                 </div>
-                <div class="pricing">200</div>
+                <div class="card card8">
+                    <div class="item">
+                        <div class="item-name">Lorem Ipsum</div>
+                        <div class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit</div>
+                        <div class="timing">Lunch Deal</div>
+                    </div>
+                    <div class="pricing">200</div>
+                </div>
             </div>
         </div>
     </section>
     <hr>
+
+    <section class="aside">
+        <div class="dialogue" id="under-development">
+            <div class="div">This feature is under development.</div>
+            <div class="btns">
+                <div class="btn">Appreciate My Work</div>
+                <div class="btn alt">Close</div>
+            </div>
+        </div>
+        <div class="backdrop"></div>
+    </section>
 
 </body>
 
