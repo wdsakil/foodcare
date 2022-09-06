@@ -8,7 +8,7 @@ function deActivateNav() {
     nav.classList.remove('active')
     backdrop.classList.remove("active")
 }
-function toggleNav(){
+function toggleNav() {
     header.classList.add('sticky')
     nav.classList.toggle('active')
     backdrop.classList.toggle("active")
@@ -20,7 +20,7 @@ burger.addEventListener('click', () => {
 
 backdrop.addEventListener('click', () => {
     deActivateNav()
-    
+
 })
 
 nav.addEventListener('click', (e) => {
@@ -31,54 +31,56 @@ nav.addEventListener('click', (e) => {
 
 // Sticky Header Codes
 
-window.addEventListener('scroll', ()=>{
+window.addEventListener('scroll', () => {
     header.classList.toggle('sticky', window.scrollY > 0)
 })
 
 
 //   Under Development
-function underDevelopment(){
+function underDevelopment() {
     document.querySelector('#under-development').classList.toggle('active')
     backdrop.classList.toggle('active')
 
-    if(backdrop.classList.contains('active')){
-    document.querySelectorAll('#under-development .btn').forEach(e => e.addEventListener('click',(underDevelopment)))
-}
+    if (backdrop.classList.contains('active')) {
+        document.querySelectorAll('#under-development .btn').forEach(e => e.addEventListener('click', (underDevelopment)))
+    }
 }
 const addToCartBtns = document.querySelectorAll('.btn.add-to-cart')
-for (const btn of addToCartBtns){
+for (const btn of addToCartBtns) {
     btn.addEventListener('click', underDevelopment)
 }
 // preloader
-onload = (event) => {
+onload = (e) => {
     const preloader = document.querySelector('.pre-loader')
     preloader.classList.add('hidden')
 
-// Hero Carousel
-var swiper = new Swiper(".mySwiper", {
-    speed: 400,
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true,
-    parallax: true,
-    centerSlides: true,
-    autoplay: {
-        delay:3000
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    on: {
-        init: function () {
-            let swiper = this
-            for(let i = 0; i < swiper.slides.length; i++){
-                swiper.slides[i].querySelector('.bg-img')
-                .setAttribute("data-swiper-parallax", 0.75 * swiper.width);
+    // Hero Carousel
+    var swiper = new Swiper(".mySwiper", {
+        speed: 400,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        parallax: true,
+        centerSlides: true,
+        autoplay: {
+            delay: 3000
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        on: {
+            init: function () {
+                let swiper = this
+                for (let i = 0; i < swiper.slides.length; i++) {
+                    let bgImg = swiper.slides[i].querySelector('.bg-img')
+                    bgImg.setAttribute("data-swiper-parallax", 0.75 * swiper.width)
+                    let texts = swiper.slides[i].querySelector('.content')
+                    texts.setAttribute("data-swiper-parallax", 0.65 * swiper.width)
+                }
             }
         }
-    }
-  });
+    });
 };
 
 
