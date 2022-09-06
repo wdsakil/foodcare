@@ -35,33 +35,6 @@ window.addEventListener('scroll', ()=>{
     header.classList.toggle('sticky', window.scrollY > 0)
 })
 
-// Hero Scripts
-
-let parallaxSliderOptions = {
-    
-
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true,
-    pagination: {
-        el: ".hero .pagination",
-        clickable: true,
-    }
-}
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    loop: true,
-    speed: 400,
-    effect: 'slide',
-    autoplay: {
-        delay:3000
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    }
-  });
 
 //   Under Development
 function underDevelopment(){
@@ -80,6 +53,22 @@ for (const btn of addToCartBtns){
 onload = (event) => {
     const preloader = document.querySelector('.pre-loader')
     preloader.classList.add('hidden')
+
+// Hero Carousel
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    speed: 400,
+    effect: 'slide',
+    autoplay: {
+        delay:3000
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    }
+  });
 };
 
 
