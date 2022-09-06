@@ -26,12 +26,11 @@
   font-family: var(--ff-reg);
   list-style: none;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 body {
   background-color: var(--clr-lit);
-  // background: linear-gradient(45deg, rgb(255, 206, 116), rgb(255, 145, 227));
   width: 100%;
-  // overflow-x: hidden;
 }
 a,
 a:active,
