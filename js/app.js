@@ -56,17 +56,27 @@ onload = (event) => {
 
 // Hero Carousel
 var swiper = new Swiper(".mySwiper", {
+    speed: 400,
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
-    speed: 400,
-    effect: 'slide',
+    parallax: true,
+    centerSlides: true,
     autoplay: {
         delay:3000
     },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+    on: {
+        init: function () {
+            let swiper = this
+            for(let i = 0; i < swiper.slides.length; i++){
+                swiper.slides[i].querySelector('.bg-img')
+                .setAttribute("data-swiper-parallax", 0.75 * swiper.width);
+            }
+        }
     }
   });
 };
