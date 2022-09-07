@@ -554,6 +554,62 @@ section.specials .btn.alt {
   margin-top: 0.5rem;
 }
 
+section.platters .wrapper {
+  text-align: center;
+  width: 100%;
+}
+section.platters .cards {
+  margin-top: 3rem;
+  max-width: min(1200px, 85vw);
+  margin-inline: auto;
+}
+section.platters .card {
+  position: relative;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #fe2;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+section.platters .item {
+  flex-grow: 1;
+  text-align: left;
+  margin-right: calc(90px - 1rem);
+}
+section.platters .item .item-name {
+  font-weight: 700;
+}
+section.platters .item .description {
+  margin-top: 0.3rem;
+}
+section.platters .item .timing {
+  margin-top: 0.25rem;
+  opacity: 0.7;
+}
+section.platters .pricing {
+  position: absolute;
+  font-size: var(--fs-s);
+  color: var(--clr-lit);
+  font-weight: 700;
+  background-color: var(--clr-pri);
+  height: 100%;
+  top: 0;
+  right: 0;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.platters .pricing .bdt {
+  font-size: var(--fs-m);
+  margin-right: 0.25rem;
+}
+
 @media print {
   .header {
     justify-content: center;

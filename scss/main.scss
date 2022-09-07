@@ -60,16 +60,16 @@ a:focus {
   align-items: center;
   background-color: #fff;
   transform-origin: top left;
-  
+
   &.hidden {
     visibility: hidden;
     opacity: 0;
-    
+
     & > * {
       transform: scale(0);
     }
   }
-  
+
   .lds-ripple {
     display: inline-block;
     position: relative;
@@ -478,7 +478,9 @@ section.about {
     @media (min-width: 850px) {
       flex-direction: row;
 
-      img{min-width: 200px;}
+      img {
+        min-width: 200px;
+      }
     }
   }
   .pics {
@@ -526,7 +528,6 @@ section.specials {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    // width: min(1000px, 85vw);
     max-width: min(1200px, 85vw);
     margin-inline: auto;
 
@@ -571,6 +572,66 @@ section.specials {
   .btn.alt {
     margin-left: 0.5rem;
     margin-top: 0.5rem;
+  }
+}
+// -----Basic Media Queries-----
+// -----------------------------
+section.platters {
+  .wrapper {
+    text-align: center;
+    width: 100%;
+  }
+  .cards {
+    margin-top: 3rem;
+    max-width: min(1200px, 85vw);
+    margin-inline: auto;
+  }
+  .card {
+    position: relative;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #fe2;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .item {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: calc(90px - 1rem);
+
+    .item-name {
+      font-weight: 700;
+    }
+    .description {
+      margin-top: 0.3rem;
+    }
+    .timing {
+      margin-top: 0.25rem;
+      opacity: 0.7;
+    }
+  }
+
+  .pricing {
+    position: absolute;
+    font-size: var(--fs-s);
+    color: var(--clr-lit);
+    font-weight: 700;
+    background-color: var(--clr-pri);
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bdt {
+      font-size: var(--fs-m);
+      margin-right: 0.25rem;
+    }
   }
 }
 // -----Basic Media Queries-----
