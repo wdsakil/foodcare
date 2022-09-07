@@ -63,10 +63,14 @@ a:focus {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  transform-origin: top left;
 }
 .pre-loader.hidden {
   visibility: hidden;
   opacity: 0;
+}
+.pre-loader.hidden > * {
+  transform: scale(0);
 }
 .pre-loader .lds-ripple {
   display: inline-block;
@@ -74,6 +78,7 @@ a:focus {
   margin-inline: auto;
   width: 6rem;
   height: 6rem;
+  transition: all 1s ease;
 }
 .pre-loader .lds-ripple div {
   position: absolute;
@@ -348,7 +353,6 @@ section.hero .item {
   overflow: hidden;
   text-align: center;
   background-size: cover;
-  background-position: center bottom;
   color: var(--clr-lit);
   display: flex;
   align-items: center;
@@ -361,7 +365,7 @@ section.hero .item .bg-img {
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center top;
 }
 section.hero .item .bg-img-1 {
   background-image: url(../img/hero-1.jpg);
@@ -379,7 +383,7 @@ section.hero .item .title {
   font-family: var(--ff-tit);
   line-height: 1.1;
   text-transform: uppercase;
-  text-shadow: 0 0.25rem 0.3rem rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5333333333);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -390,6 +394,7 @@ section.hero .item .subtitle {
   font-size: 1rem;
   font-weight: 300;
   margin-top: 0.5rem;
+  text-shadow: 0 0 0.5rem #000;
 }
 section.hero .item .btns {
   margin-top: 2rem;
@@ -451,23 +456,21 @@ section.about .wrapper {
   section.about .wrapper {
     flex-direction: row;
   }
+  section.about .wrapper img {
+    min-width: 200px;
+  }
 }
 section.about .pics {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   align-content: center;
 }
-@media (min-width: 600px) {
-  section.about .pics {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-section.about .pics .img {
-  background-image: url(../img/demo.jpg);
-  background-size: cover;
-  min-width: 200px;
+section.about .pics img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
   border-radius: 0.5rem;
   aspect-ratio: 4/3;
 }
