@@ -49,38 +49,45 @@ const addToCartBtns = document.querySelectorAll('.btn.add-to-cart')
 for (const btn of addToCartBtns) {
     btn.addEventListener('click', underDevelopment)
 }
+
 // preloader
-onload = (e) => {
+setTimeout(function(){
+    //do what you need here
     const preloader = document.querySelector('.pre-loader')
     preloader.classList.add('hidden')
-
-    // Hero Carousel
-    var swiper = new Swiper(".mySwiper", {
-        speed: 400,
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        parallax: true,
-        centerSlides: true,
-        autoplay: {
-            delay: 3000
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        on: {
-            init: function () {
-                let swiper = this
-                for (let i = 0; i < swiper.slides.length; i++) {
-                    let bgImg = swiper.slides[i].querySelector('.bg-img')
-                    bgImg.setAttribute("data-swiper-parallax", 0.75 * swiper.width)
-                    let texts = swiper.slides[i].querySelector('.content')
-                    texts.setAttribute("data-swiper-parallax", 0.65 * swiper.width)
-                }
+}, 1500);
+// Hero Section Parallax Options
+const heroParallaxOptions = {
+    speed: 400,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    parallax: true,
+    centerSlides: true,
+    autoplay: {
+        delay: 3000
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    on: {
+        init: function () {
+            let swiper = this
+            for (let i = 0; i < swiper.slides.length; i++) {
+                let bgImg = swiper.slides[i].querySelector('.bg-img')
+                bgImg.setAttribute("data-swiper-parallax", 0.75 * swiper.width)
+                let texts = swiper.slides[i].querySelector('.content')
+                texts.setAttribute("data-swiper-parallax", 0.65 * swiper.width)
             }
         }
-    });
-};
+    }
+}
 
+// Hero Carousel
+var swiper = new Swiper(".mySwiper", heroParallaxOptions);
 
+// Medium Zoom
+mediumZoom('.zoomable', {
+    background: '#0008'
+  })
