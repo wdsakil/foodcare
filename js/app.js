@@ -1,9 +1,18 @@
-//Navigation scripts
+// -------------------------
+// -----Header scripts------
+// -------------------------
 const header = document.querySelector('.header')
 const nav = document.querySelector('.nav')
 const burger = document.querySelector('.fa-burger')
 const backdrop = document.querySelector('.backdrop')
 
+
+// Sticky Header Codes
+window.addEventListener('scroll', () => {
+    header.classList.toggle('sticky', window.scrollY > 0)
+})
+
+// Navigation Scripts
 function deActivateNav() {
     nav.classList.remove('active')
     backdrop.classList.remove("active")
@@ -29,43 +38,25 @@ nav.addEventListener('click', (e) => {
     }
 })
 
-// Sticky Header Codes
-
-window.addEventListener('scroll', () => {
-    header.classList.toggle('sticky', window.scrollY > 0)
-})
-
-
-//   Under Development
-function underDevelopment() {
-    document.querySelector('#under-development').classList.toggle('active')
-    backdrop.classList.toggle('active')
-
-    if (backdrop.classList.contains('active')) {
-        document.querySelectorAll('#under-development .btn').forEach(e => e.addEventListener('click', (underDevelopment)))
-    }
-}
-const addToCartBtns = document.querySelectorAll('.btn.add-to-cart')
-for (const btn of addToCartBtns) {
-    btn.addEventListener('click', underDevelopment)
-}
-
 // preloader
-setTimeout(function(){
-    //do what you need here
+setTimeout(function () {
     const preloader = document.querySelector('.pre-loader')
     preloader.classList.add('hidden')
-}, 1500);
-// Hero Section Parallax Options
+}, 1000);
+
+// -------------------------
+// --------Carousels--------
+// -------------------------
+
+// Hero Carousel Options
 const heroParallaxOptions = {
     speed: 400,
-    slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
     parallax: true,
     centerSlides: true,
     autoplay: {
-        delay: 3000
+        delay: 3000,
     },
     pagination: {
         el: ".swiper-pagination",
@@ -84,10 +75,31 @@ const heroParallaxOptions = {
     }
 }
 
-// Hero Carousel
-var swiper = new Swiper(".mySwiper", heroParallaxOptions);
+// Hero Carousel 
+var heroSwiper = new Swiper(".hero", heroParallaxOptions);
+var specialsSwiper = new Swiper(".specials .tops", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+})
+// -------------------------
+// ---------Others---------
+// -------------------------
 
 // Medium Zoom
 mediumZoom('.zoomable', {
-    background: '#0008'
-  })
+    background: '#0009'
+})
+
+// add to cart under development
+function underDevelopment() {
+    document.querySelector('#under-development').classList.toggle('active')
+    backdrop.classList.toggle('active')
+
+    if (backdrop.classList.contains('active')) {
+        document.querySelectorAll('#under-development .btn').forEach(e => e.addEventListener('click', (underDevelopment)))
+    }
+}
+const addToCartBtns = document.querySelectorAll('.btn.add-to-cart')
+for (const btn of addToCartBtns) {
+    btn.addEventListener('click', underDevelopment)
+}
