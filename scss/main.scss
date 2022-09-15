@@ -525,7 +525,7 @@ section.specials {
   padding-bottom: 2rem;
   text-align: center;
 
-  .swiper-wrapper{
+  .swiper-wrapper {
     z-index: auto; //To avoid zoomable images going backward
   }
 
@@ -534,6 +534,56 @@ section.specials {
     font-size: var(--fs-m);
     align-items: center;
     gap: 1rem;
+
+    .category-picker {
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      width: max-content;
+      font-size: var(--fs-s);
+      padding: 0.75rem 1rem;
+      border-radius: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      border: 2px solid var(--clr-pri);
+      
+      i {
+        transition: all 0.2s ease-in-out;
+        transform-origin: center center;
+      }
+      
+      &.active {
+        i {
+          rotate: 540deg;
+        }
+        .options {
+          height: 6rem;
+        }
+      }
+      
+      .options {
+        position: absolute;
+        left: 0;
+        top: 3.5rem;
+        width: 100%;
+        border-radius: 1.5rem;
+        z-index: 1;
+        overflow: hidden;
+        height: 0;
+        transition: all 0.2s ease-in-out;
+        & > * {
+          cursor: pointer;
+          padding: 0.75rem 1rem;
+          height: 3rem;
+          color: var(--clr-lit);
+          background-color: var(--clr-bg);
+          &:hover {
+            background-color: var(--clr-pri);
+          }
+        }
+      }
+    }
+
     .line {
       height: 1px;
       background-color: var(--clr-drk);
@@ -541,13 +591,9 @@ section.specials {
     }
     .swiper-nav > * {
       cursor: pointer;
+      user-select: none;
       font-size: var(--fs-l);
-      display: inline-block;
-      height: 2rem;
-      width: 2rem;
-      border-radius: 2rem;
-      background-color: var(--clr-pri);
-      color: var(--clr-lit);
+      color: var(--clr-pri);
     }
   }
 

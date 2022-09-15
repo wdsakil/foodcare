@@ -80,6 +80,10 @@ var heroSwiper = new Swiper(".hero", heroParallaxOptions);
 var specialsSwiper = new Swiper(".specials .mySwiper", {
     slidesPerView: "auto",
     spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-nav .fa-circle-chevron-right',
+        prevEl: '.swiper-nav .fa-circle-chevron-left',
+      },
 })
 // -------------------------
 // ---------Others---------
@@ -104,3 +108,13 @@ const addToCartBtns = document.querySelectorAll('.btn.add-to-cart')
 for (const btn of addToCartBtns) {
     btn.addEventListener('click', underDevelopment)
 }
+
+// Specials Category Picker
+const categoryPicker = document.querySelector('.category-picker')
+categoryPicker.addEventListener('click', ()=>{
+    categoryPicker.classList.toggle('active')
+    categoryPicker.querySelectorAll('.option').forEach((each)=> each.addEventListener('click',()=>{
+        categoryPicker.firstElementChild.textContent = each.textContent
+        categoryPicker.classList.toggle('active')
+    }))
+})

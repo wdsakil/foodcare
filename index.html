@@ -124,17 +124,21 @@
                 <div class="head">Special Dishes</div>
             </div>
             <div class="category-nav">
-                <select name="category-picker" id="category-picker">
-                    <option value="dog">Popular Items</option>
-                    <option value="cat">Featured Items</option>
-                </select>
+                <div class="category-picker">
+                    <span>Popular Items</span>
+                    <i class="fa-solid fa-angle-down"></i>
+                    <div class="options">
+                        <div class="option popular">Popular Items</div>
+                        <div class="option featured">Featured Items</div>
+                    </div>
+                </div>
                 <div class="line"></div>
                 <div class="swiper-nav">
-                    <span class="nav-prev">&lt</span>
-                    <span class="nav-next">&gt</span>
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                    <i class="fa-solid fa-circle-chevron-right"></i>
                 </div>
             </div>
-            <div class="cards tops mySwiper">
+            <div class="cards populars mySwiper">
                 <div class="swiper-wrapper">
                     <div class="card card1 swiper-slide" id="card1">
                         <img src="./img/demo.jpg" class="zoomable" alt="Item 1">
