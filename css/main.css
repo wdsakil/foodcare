@@ -596,16 +596,44 @@ section.specials .card:hover {
 section.specials img {
   width: 100%;
   aspect-ratio: 4/3;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 section.specials .title {
   font-size: var(--fs-l);
   font-weight: 700;
   margin-top: 0.5rem;
 }
+section.specials .stars {
+  margin-top: 0.2rem;
+}
+section.specials .stars > * {
+  color: gold;
+}
 section.specials .pricing {
-  margin-top: 0.3rem;
+  margin-top: 0.5rem;
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+section.specials .pricing .old {
+  position: relative;
+  font-size: var(--fs-l);
+  font-weight: 300;
+}
+section.specials .pricing .old::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: calc(50% - 2px);
+  height: 2px;
+  width: 110%;
+  background-color: var(--clr-pri);
+  rotate: -20deg;
+  transform-origin: center center;
+}
+section.specials .pricing .bdt {
+  margin-inline: 0.5rem;
+  color: var(--clr-bg);
 }
 section.specials .btns {
   margin: 0.5rem;

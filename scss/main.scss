@@ -627,15 +627,45 @@ section.specials {
   img {
     width: 100%;
     aspect-ratio: 4 / 3;
-    object-fit: cover;
+    // object-fit: cover;
+    object-position: center;
   }
   .title {
     font-size: var(--fs-l);
     font-weight: 700;
     margin-top: 0.5rem;
   }
+  .stars{
+    margin-top: .2rem;
+    &>*{
+      color: gold;
+    }
+  }
   .pricing {
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
+    font-size: var(--fs-xl);
+    font-weight: 700;
+
+    .old{
+      position: relative;
+      font-size: var(--fs-l);
+      font-weight: 300;
+      &::before{
+        content: '';
+        position: absolute;
+        left: -5%;
+        top: calc(50% - 2px);
+        height: 2px;
+        width: 110%;
+        background-color: var(--clr-pri);
+        rotate: -20deg;
+        transform-origin: center center;
+      }
+    }
+    .bdt{
+      margin-inline: 0.5rem;
+      color: var(--clr-bg);
+    }
   }
   .btns {
     margin: 0.5rem;
