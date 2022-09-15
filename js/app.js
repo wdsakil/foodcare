@@ -79,7 +79,7 @@ const heroParallaxOptions = {
 var heroSwiper = new Swiper(".hero", heroParallaxOptions);
 var specialsSwiper = new Swiper(".specials .mySwiper", {
     slidesPerView: "auto",
-    spaceBetween: 30,
+    // spaceBetween: 30,
     navigation: {
         nextEl: '.swiper-nav .fa-circle-chevron-right',
         prevEl: '.swiper-nav .fa-circle-chevron-left',

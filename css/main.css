@@ -498,9 +498,6 @@ section.specials {
   padding-bottom: 2rem;
   text-align: center;
 }
-section.specials .swiper-wrapper {
-  z-index: auto;
-}
 section.specials .category-nav {
   display: flex;
   font-size: var(--fs-m);
@@ -573,8 +570,10 @@ section.specials .cards {
   margin-top: 1rem;
   width: 100%;
   overflow: hidden;
-  padding: 1rem;
   z-index: -1;
+}
+section.specials .swiper-wrapper {
+  z-index: auto;
 }
 section.specials .card {
   cursor: -webkit-grab;
@@ -582,16 +581,17 @@ section.specials .card {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  width: min(250px, 80vw);
+  width: min(250px, 85vw);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1333333333);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1333333333);
   transition: all 0.2s ease-in-out;
   z-index: -1;
+  margin: 0.7rem 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.2666666667);
 }
 section.specials .card:hover {
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3333333333);
-  scale: 1.01;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3333333333);
 }
 section.specials img {
   width: 100%;
@@ -633,7 +633,7 @@ section.specials .pricing .old::before {
 }
 section.specials .pricing .bdt {
   margin-inline: 0.5rem;
-  color: var(--clr-bg);
+  color: rgba(255, 0, 0, 0.3333333333);
 }
 section.specials .btns {
   margin: 0.5rem;
