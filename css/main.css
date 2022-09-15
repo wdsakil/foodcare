@@ -498,6 +498,9 @@ section.specials {
   padding-bottom: 2rem;
   text-align: center;
 }
+section.specials .swiper-wrapper {
+  z-index: auto;
+}
 section.specials .category-nav {
   display: flex;
   font-size: var(--fs-m);

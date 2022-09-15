@@ -87,6 +87,7 @@ var specialsSwiper = new Swiper(".specials .mySwiper", {
 
 // Medium Zoom
 mediumZoom('.zoomable', {
+    margin: header.clientHeight - 10,
     background: '#000'
 })
 

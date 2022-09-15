@@ -525,6 +525,10 @@ section.specials {
   padding-bottom: 2rem;
   text-align: center;
 
+  .swiper-wrapper{
+    z-index: auto; //To avoid zoomable images going backward
+  }
+
   .category-nav {
     display: flex;
     font-size: var(--fs-m);
