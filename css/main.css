@@ -505,18 +505,30 @@ section.specials .category-nav {
   gap: 1rem;
 }
 section.specials .category-nav .line {
-  height: 3px;
+  height: 1px;
   background-color: var(--clr-drk);
   flex-grow: 1;
+}
+section.specials .category-nav .swiper-nav > * {
+  cursor: pointer;
+  font-size: var(--fs-l);
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 2rem;
+  background-color: var(--clr-pri);
+  color: var(--clr-lit);
 }
 section.specials .cards {
   margin-top: 1rem;
   width: 100%;
   overflow: hidden;
   padding: 1rem;
+  z-index: -1;
 }
 section.specials .card {
-  cursor: default;
+  cursor: -webkit-grab;
+  cursor: grab;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -524,11 +536,12 @@ section.specials .card {
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1333333333);
-  transition: translate 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  z-index: -1;
 }
 section.specials .card:hover {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3333333333);
-  translate: 0 -4px;
+  scale: 1.01;
 }
 section.specials img {
   width: 100%;

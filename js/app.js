@@ -77,7 +77,7 @@ const heroParallaxOptions = {
 
 // Hero Carousel 
 var heroSwiper = new Swiper(".hero", heroParallaxOptions);
-var specialsSwiper = new Swiper(".specials .tops", {
+var specialsSwiper = new Swiper(".specials .mySwiper", {
     slidesPerView: "auto",
     spaceBetween: 30,
 })
@@ -87,7 +87,7 @@ var specialsSwiper = new Swiper(".specials .tops", {
 
 // Medium Zoom
 mediumZoom('.zoomable', {
-    background: '#0009'
+    background: '#000'
 })
 
 // add to cart under development
