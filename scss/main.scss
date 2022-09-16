@@ -154,7 +154,7 @@ a:focus {
 
     * {
       color: inherit;
-      font-size: var(--fs-xl);
+      font-size: var(--fs-l);
     }
   }
   .fa-burger {
@@ -185,24 +185,39 @@ a:focus {
     }
   }
   .nav {
-    font-size: var(--fs-m);
+    font-size: var(--fs-xs);
     position: fixed;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
     top: 0;
     bottom: 0;
     left: 100%;
+    width: 200px;
     background-color: var(--clr-lit);
-    padding-top: 10rem;
+    // padding-top: 10rem;
     overflow-y: auto;
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
+    
+        a {
+          width: 100%;
+          transition: color 0.2s ease-in-out;
+          padding: .75rem 0 .75rem 1rem;
+          color: var(--clr-drk);
+          font-weight: 300;
+
+          &.our-menu{/*color: var(--clr-pri);*/ font-weight: 400;}
+    
+          &:hover {
+            opacity: 0.75;
+          }
+        }
 
     &.active {
       transform: translateX(-100%);
-      @media (min-width: 780px) {
+      @media (min-width: 800px) {
         transform: translateX(0);
       }
 
@@ -223,21 +238,9 @@ a:focus {
         background-clip: text;
       }
     }
-
-    a {
-      text-align: center;
-      transition: color 0.2s ease-in-out;
-      padding-block: 0.5rem;
-      width: 70vw;
-      color: var(--clr-drk);
-
-      &:hover {
-        opacity: 0.75;
-      }
-    }
   }
   // Header Media Queries
-  @media (min-width: 780px) {
+  @media (min-width: 800px) {
     .nav {
       position: static;
       flex-direction: row;
@@ -245,13 +248,12 @@ a:focus {
       z-index: auto;
       background-color: transparent;
       padding-top: 0;
+      width: auto;
       overflow-y: visible;
       transition: all 0s ease-in-out 0s;
       a {
-        font-weight: 300;
         width: auto;
-        padding-inline: 0.75rem;
-        padding-block: 0.25rem;
+        padding: .25rem .75rem;
         color: var(--clr-lit);
       }
     }
@@ -423,7 +425,6 @@ section.hero {
     width: 0.75rem;
     border-radius: 10rem;
     background-color: var(--clr-lit);
-    background-color: var(--clr-bg);
     opacity: 0.5;
     transition: all 0.3s ease-in-out;
   }
@@ -524,13 +525,13 @@ section.specials {
   padding-top: 3rem;
   padding-bottom: 2rem;
   text-align: center;
-  
+
   .category-nav {
     display: flex;
     font-size: var(--fs-m);
     align-items: center;
     gap: 1rem;
-    
+
     .category-picker {
       cursor: pointer;
       user-select: none;
@@ -542,12 +543,12 @@ section.specials {
       display: flex;
       gap: 1rem;
       border: 2px solid var(--clr-pri);
-      
+
       i {
         transition: all 0.2s ease-in-out;
         transform-origin: center center;
       }
-      
+
       &.active {
         i {
           rotate: 540deg;
@@ -556,7 +557,7 @@ section.specials {
           height: 6rem;
         }
       }
-      
+
       .options {
         position: absolute;
         left: 0;
@@ -579,7 +580,7 @@ section.specials {
         }
       }
     }
-    
+
     .line {
       height: 1px;
       background-color: var(--clr-drk);
@@ -592,7 +593,7 @@ section.specials {
       color: var(--clr-pri);
     }
   }
-  
+
   .cards {
     margin-top: 1rem;
     // height: 500px;
@@ -601,10 +602,10 @@ section.specials {
     // padding: 1rem;
     z-index: -1;
   }
-  
-    .swiper-wrapper {
-      z-index: auto; //To avoid zoomable images going backward
-    }
+
+  .swiper-wrapper {
+    z-index: auto; //To avoid zoomable images going backward
+  }
   .card {
     cursor: grab;
     height: max-content;
@@ -631,9 +632,9 @@ section.specials {
     font-weight: 700;
     margin-top: 0.5rem;
   }
-  .stars{
-    margin-top: .2rem;
-    &>*{
+  .stars {
+    margin-top: 0.2rem;
+    & > * {
       color: gold;
     }
   }
@@ -642,12 +643,12 @@ section.specials {
     font-size: var(--fs-xl);
     font-weight: 700;
 
-    .old{
+    .old {
       position: relative;
       font-size: var(--fs-l);
       font-weight: 300;
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         position: absolute;
         left: -5%;
         top: calc(50% - 2px);
@@ -658,7 +659,7 @@ section.specials {
         transform-origin: center center;
       }
     }
-    .bdt{
+    .bdt {
       margin-inline: 0.5rem;
       color: #f005;
     }

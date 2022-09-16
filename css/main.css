@@ -183,7 +183,7 @@ a:focus {
 }
 .header .brand * {
   color: inherit;
-  font-size: var(--fs-xl);
+  font-size: var(--fs-l);
 }
 .header .fa-burger {
   z-index: 100;
@@ -202,25 +202,38 @@ a:focus {
   opacity: 0.8;
 }
 .header .nav {
-  font-size: var(--fs-m);
+  font-size: var(--fs-xs);
   position: fixed;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
   top: 0;
   bottom: 0;
   left: 100%;
+  width: 200px;
   background-color: var(--clr-lit);
-  padding-top: 10rem;
   overflow-y: auto;
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
 }
+.header .nav a {
+  width: 100%;
+  transition: color 0.2s ease-in-out;
+  padding: 0.75rem 0 0.75rem 1rem;
+  color: var(--clr-drk);
+  font-weight: 300;
+}
+.header .nav a.our-menu { /*color: var(--clr-pri);*/
+  font-weight: 400;
+}
+.header .nav a:hover {
+  opacity: 0.75;
+}
 .header .nav.active {
   transform: translateX(-100%);
 }
-@media (min-width: 780px) {
+@media (min-width: 800px) {
   .header .nav.active {
     transform: translateX(0);
   }
@@ -230,17 +243,7 @@ a:focus {
   -webkit-background-clip: text;
   background-clip: text;
 }
-.header .nav a {
-  text-align: center;
-  transition: color 0.2s ease-in-out;
-  padding-block: 0.5rem;
-  width: 70vw;
-  color: var(--clr-drk);
-}
-.header .nav a:hover {
-  opacity: 0.75;
-}
-@media (min-width: 780px) {
+@media (min-width: 800px) {
   .header .nav {
     position: static;
     flex-direction: row;
@@ -248,14 +251,13 @@ a:focus {
     z-index: auto;
     background-color: transparent;
     padding-top: 0;
+    width: auto;
     overflow-y: visible;
     transition: all 0s ease-in-out 0s;
   }
   .header .nav a {
-    font-weight: 300;
     width: auto;
-    padding-inline: 0.75rem;
-    padding-block: 0.25rem;
+    padding: 0.25rem 0.75rem;
     color: var(--clr-lit);
   }
   .header .fa-burger {
@@ -406,7 +408,6 @@ section.hero .swiper-pagination-bullet {
   width: 0.75rem;
   border-radius: 10rem;
   background-color: var(--clr-lit);
-  background-color: var(--clr-bg);
   opacity: 0.5;
   transition: all 0.3s ease-in-out;
 }
