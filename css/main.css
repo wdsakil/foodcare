@@ -577,6 +577,10 @@ section.specials .cards {
   width: 100%;
   overflow: hidden;
   z-index: -1;
+  display: none;
+}
+section.specials .cards.active {
+  display: block;
 }
 section.specials .swiper-wrapper {
   z-index: auto;

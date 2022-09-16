@@ -140,8 +140,8 @@
                     <span>Popular Items</span>
                     <i class="fa-solid fa-angle-down"></i>
                     <div class="options">
-                        <div class="option popular">Popular Items</div>
-                        <div class="option featured">Featured Items</div>
+                        <div class="option popular" data-index="0">Popular Items</div>
+                        <div class="option featured" data-index="1">Featured Items</div>
                     </div>
                 </div>
                 <div class="line"></div>
@@ -150,11 +150,11 @@
                     <i class="fa-solid fa-circle-chevron-right"></i>
                 </div>
             </div>
-            <div class="cards populars mySwiper">
+            <div class="cards populars mySwiper active" id="popular" data-index="0">
                 <div class="swiper-wrapper">
                     <div class="card card1 swiper-slide" id="card1">
                         <img src="./img/burger.png" class="zoomable" alt="Item 1">
-                        <div class="title">Item Number 1</div>
+                        <div class="title">Popular Item 1</div>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -177,7 +177,7 @@
                     </div>
                     <div class="card card2 swiper-slide">
                         <img src="./img/burger.png" class="zoomable" alt="Item 2">
-                        <div class="title">Item Number 2</div>
+                        <div class="title">Popular Item 2</div>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -200,7 +200,7 @@
                     </div>
                     <div class="card card3 swiper-slide">
                         <img src="./img/burger.png" class="zoomable" alt="Item 3">
-                        <div class="title">Item Number 3</div>
+                        <div class="title">Popular Item 3</div>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -223,7 +223,7 @@
                     </div>
                     <div class="card card4 swiper-slide">
                         <img src="./img/burger.png" class="zoomable" alt="Item 4">
-                        <div class="title">Item Number 4</div>
+                        <div class="title">Popular Item 4</div>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -246,7 +246,7 @@
                     </div>
                     <div class="card card5 swiper-slide">
                         <img src="./img/burger.png" class="zoomable" alt="Item 5">
-                        <div class="title">Item Number 5</div>
+                        <div class="title">Popular Item 5</div>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -269,7 +269,7 @@
                     </div>
                     <div class="card card6 swiper-slide">
                         <img src="./img/burger.png" class="zoomable" alt="Item 6">
-                        <div class="title">Item Number 6</div>
+                        <div class="title">Popular Item 6</div>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -292,7 +292,7 @@
                     </div>
                     <div class="card card7 swiper-slide">
                         <img src="./img/burger.png" class="zoomable" alt="Item 7">
-                        <div class="title">Item Number 7</div>
+                        <div class="title">Popular Item 7</div>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -315,7 +315,195 @@
                     </div>
                     <div class="card card8 swiper-slide">
                         <img src="./img/burger.png" class="zoomable" alt="Item 8">
-                        <div class="title">Item Number 8</div>
+                        <div class="title">Popular Item 8</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="pricing"><s class="old">200</s><span class="bdt">&#2547;</span><span
+                                class="new">100</span></div>
+                        <div class="btns">
+                            <a class="btn order-now" href="tel:+8801300000000">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Order Now</span>
+                            </a>
+                            <div class="btn alt add-to-cart">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards featured mySwiper" id="featured" data-index="1">
+                <div class="swiper-wrapper">
+                    <div class="card card1 swiper-slide" id="card1">
+                        <img src="./img/demo.jpg" class="zoomable" alt="Item 1">
+                        <div class="title">Featured Item 1</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="pricing"><s class="old">200</s><span class="bdt">&#2547;</span><span
+                                class="new">100</span></div>
+                        <div class="btns">
+                            <a class="btn order-now" href="tel:+8801300000000">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Order Now</span>
+                            </a>
+                            <div class="btn alt add-to-cart">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card2 swiper-slide">
+                        <img src="./img/demo.jpg" class="zoomable" alt="Item 2">
+                        <div class="title">Featured Item 2</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="pricing"><s class="old">200</s><span class="bdt">&#2547;</span><span
+                                class="new">100</span></div>
+                        <div class="btns">
+                            <a class="btn order-now" href="tel:+8801300000000">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Order Now</span>
+                            </a>
+                            <div class="btn alt add-to-cart">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card3 swiper-slide">
+                        <img src="./img/demo.jpg" class="zoomable" alt="Item 3">
+                        <div class="title">Featured Item 3</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="pricing"><s class="old">200</s><span class="bdt">&#2547;</span><span
+                                class="new">100</span></div>
+                        <div class="btns">
+                            <a class="btn order-now" href="tel:+8801300000000">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Order Now</span>
+                            </a>
+                            <div class="btn alt add-to-cart">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card4 swiper-slide">
+                        <img src="./img/demo.jpg" class="zoomable" alt="Item 4">
+                        <div class="title">Featured Item 4</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <div class="pricing"><s class="old">200</s><span class="bdt">&#2547;</span><span
+                                class="new">100</span></div>
+                        <div class="btns">
+                            <a class="btn order-now" href="tel:+8801300000000">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Order Now</span>
+                            </a>
+                            <div class="btn alt add-to-cart">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card5 swiper-slide">
+                        <img src="./img/demo.jpg" class="zoomable" alt="Item 5">
+                        <div class="title">Featured Item 5</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="pricing"><s class="old">200</s><span class="bdt">&#2547;</span><span
+                                class="new">100</span></div>
+                        <div class="btns">
+                            <a class="btn order-now" href="tel:+8801300000000">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Order Now</span>
+                            </a>
+                            <div class="btn alt add-to-cart">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card6 swiper-slide">
+                        <img src="./img/demo.jpg" class="zoomable" alt="Item 6">
+                        <div class="title">Featured Item 6</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="pricing"><s class="old">200</s><span class="bdt">&#2547;</span><span
+                                class="new">100</span></div>
+                        <div class="btns">
+                            <a class="btn order-now" href="tel:+8801300000000">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Order Now</span>
+                            </a>
+                            <div class="btn alt add-to-cart">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card7 swiper-slide">
+                        <img src="./img/demo.jpg" class="zoomable" alt="Item 7">
+                        <div class="title">Featured Item 7</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <div class="pricing"><s class="old">200</s><span class="bdt">&#2547;</span><span
+                                class="new">100</span></div>
+                        <div class="btns">
+                            <a class="btn order-now" href="tel:+8801300000000">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>Order Now</span>
+                            </a>
+                            <div class="btn alt add-to-cart">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>Add to Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card card8 swiper-slide">
+                        <img src="./img/demo.jpg" class="zoomable" alt="Item 8">
+                        <div class="title">Featured Item 8</div>
                         <div class="stars">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>

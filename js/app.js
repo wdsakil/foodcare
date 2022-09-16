@@ -83,7 +83,7 @@ var specialsSwiper = new Swiper(".specials .mySwiper", {
     navigation: {
         nextEl: '.swiper-nav .fa-circle-chevron-right',
         prevEl: '.swiper-nav .fa-circle-chevron-left',
-      },
+    },
 })
 // -------------------------
 // ---------Others---------
@@ -111,10 +111,22 @@ for (const btn of addToCartBtns) {
 
 // Specials Category Picker
 const categoryPicker = document.querySelector('.category-picker')
-categoryPicker.addEventListener('click', ()=>{
+
+categoryPicker.addEventListener('click', (e) => {
+    const optionParent = categoryPicker.querySelector('.options')
+
     categoryPicker.classList.toggle('active')
-    categoryPicker.querySelectorAll('.option').forEach((each)=> each.addEventListener('click',()=>{
-        categoryPicker.firstElementChild.textContent = each.textContent
-        categoryPicker.classList.toggle('active')
-    }))
+    if (optionParent.contains(e.target)) {
+        const cards = document.querySelectorAll('.cards.mySwiper')
+
+        // Change Picker Placeholder
+        categoryPicker.firstElementChild.textContent = e.target.textContent
+        // Change Content
+        cards.forEach((el) => {
+            el.classList.remove('active')
+            if (el.dataset.index === e.target.dataset.index) {
+                el.classList.add('active')
+            }
+        })
+    }
 })

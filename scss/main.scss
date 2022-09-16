@@ -607,6 +607,11 @@ section.specials {
     overflow: hidden;
     // padding: 1rem;
     z-index: -1;
+    display: none;
+
+    &.active{
+      display: block;
+    }
   }
 
   .swiper-wrapper {
