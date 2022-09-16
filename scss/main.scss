@@ -28,6 +28,9 @@
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--clr-lit);
   width: 100%;
@@ -200,20 +203,23 @@ a:focus {
     overflow-y: auto;
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
-    
-        a {
-          width: 100%;
-          transition: color 0.2s ease-in-out;
-          padding: .75rem 0 .75rem 1rem;
-          color: var(--clr-drk);
-          font-weight: 300;
 
-          &.our-menu{/*color: var(--clr-pri);*/ font-weight: 400;}
-    
-          &:hover {
-            opacity: 0.75;
-          }
-        }
+    a {
+      width: 100%;
+      transition: color 0.2s ease-in-out;
+      padding: 0.75rem 0 0.75rem 1rem;
+      color: var(--clr-drk);
+      font-weight: 300;
+
+      &.our-menu {
+        /*color: var(--clr-pri);*/
+        font-weight: 400;
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
 
     &.active {
       transform: translateX(-100%);
@@ -253,7 +259,7 @@ a:focus {
       transition: all 0s ease-in-out 0s;
       a {
         width: auto;
-        padding: .25rem .75rem;
+        padding: 0.25rem 0.75rem;
         color: var(--clr-lit);
       }
     }
