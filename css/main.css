@@ -467,8 +467,13 @@ section.about .pics {
   z-index: 0;
   min-width: 400px;
   height: 338px;
-  max-width: 90vw;
+  max-width: 90%;
   margin-inline: auto;
+}
+@media (max-width: 440px) {
+  section.about .pics {
+    margin-left: 3rem;
+  }
 }
 section.about .pics img {
   position: absolute;
@@ -480,6 +485,13 @@ section.about .pics img {
   left: calc(var(--data-abtip) * 50px);
   top: calc(var(--data-abtip) * 50px);
   box-shadow: 3px 3px 3px #fff;
+}
+@media (max-width: 440px) {
+  section.about .pics img {
+    left: 0;
+    top: calc(var(--data-abtip) * 65px);
+    box-shadow: 0 3px 3px #fff;
+  }
 }
 section.about .pics img:nth-of-type(1) {
   --data-abtip: 0;
