@@ -679,6 +679,7 @@ section.specials .card {
   z-index: -1;
   margin: 0.7rem 1.2rem;
   border: 1px solid rgba(0, 0, 0, 0.2666666667);
+  position: relative;
 }
 section.specials .card:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3333333333);
@@ -731,6 +732,19 @@ section.specials .btns {
 section.specials .btn.alt {
   margin-left: 0.5rem;
   margin-top: 0.5rem;
+}
+section.specials .banner {
+  padding-block: 0.5rem;
+  width: 15rem;
+  color: var(--clr-lit);
+  background-color: var(--clr-pri);
+  position: absolute;
+  right: 0;
+  top: 0;
+  rotate: 35deg;
+  translate: 70px 20px;
+  transform-origin: center;
+  border-bottom: var(--clr-lit) 2px solid;
 }
 
 section.platters .wrapper {

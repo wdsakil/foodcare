@@ -92,7 +92,7 @@ var specialsSwiper = new Swiper(".specials .mySwiper", {
 // Medium Zoom
 mediumZoom('.zoomable', {
     margin: header.clientHeight - 10,
-    background: '#000'
+    background: '#0009'
 })
 
 // add to cart under development
@@ -130,3 +130,17 @@ categoryPicker.addEventListener('click', (e) => {
         })
     }
 })
+
+// Discount Banner
+const pricings = document.querySelectorAll('.specials .card .pricing')
+for (const pricing of pricings){
+   const oldPrice = Number(pricing.querySelector('.old').textContent)
+   const newPrice = Number(pricing.querySelector('.new').textContent)
+   const discount = Math.round(((oldPrice - newPrice) / oldPrice) * 100)
+      if(discount >= 40){
+        const banner = document.createElement("div")
+        banner.className = 'banner'
+        banner.innerHTML = discount + '% Discount'
+        pricing.parentElement.appendChild(banner)
+    }
+}

@@ -698,6 +698,7 @@ section.specials {
     z-index: -1;
     margin: 0.7rem 1.2rem;
     border: 1px solid #0004;
+    position: relative;
     &:hover {
       box-shadow: 0 0 10px #0005;
     }
@@ -751,6 +752,19 @@ section.specials {
   .btn.alt {
     margin-left: 0.5rem;
     margin-top: 0.5rem;
+  }
+  .banner{
+    padding-block: .5rem;
+    width: 15rem;
+    color: var(--clr-lit);
+    background-color: var(--clr-pri);
+    position: absolute;
+    right: 0;
+    top: 0;
+    rotate: 35deg;
+    translate: 70px 20px ;
+    transform-origin: center;
+    border-bottom: var(--clr-lit) 2px solid;
   }
 }
 // -----Basic Media Queries-----
