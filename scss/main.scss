@@ -582,8 +582,12 @@ section.about {
     margin: 1.5rem auto;
     gap: 1.5rem 1rem;
     
-    @media(max-width: 370px){
+    @media(max-width: 400px){
       grid-template-columns: 1fr;
+
+      .block{
+        padding-left: 3vw;
+      }
     }
     
     .block {
