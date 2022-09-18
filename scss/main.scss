@@ -162,7 +162,7 @@ a:focus {
   }
   .fa-burger {
     z-index: 100;
-    font-size: var(--fs-xl);
+    font-size: var(--fs-l);
     border-radius: 0.5rem;
     padding: 0.1rem;
     margin-right: 0.5rem;
@@ -495,7 +495,7 @@ section.about {
     margin-inline: auto;
 
     @media (max-width: 440px){
-      margin-left: 3rem;
+      min-width: 80%;
     }
 
     img {
@@ -510,6 +510,9 @@ section.about {
       
       @media (max-width: 440px){
         left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100%;
         top: calc(var(--data-abtip) * 65px);
         box-shadow: 0 3px 3px #fff;
     }
