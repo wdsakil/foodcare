@@ -473,6 +473,7 @@ section.about .pics {
 @media (max-width: 440px) {
   section.about .pics {
     min-width: 80%;
+    height: 400px;
   }
 }
 section.about .pics img {
@@ -606,6 +607,7 @@ section.specials .category-nav {
   display: flex;
   font-size: var(--fs-m);
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 section.specials .category-nav .category-picker {
@@ -615,15 +617,16 @@ section.specials .category-nav .category-picker {
       -ms-user-select: none;
           user-select: none;
   position: relative;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  font-size: var(--fs-s);
-  padding: 0.75rem 1rem;
-  border-radius: 1.5rem;
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  font-size: var(--fs-s);
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
   border: 2px solid var(--clr-pri);
+}
+section.specials .category-nav .category-picker span {
+  text-align: left;
+  width: 130px;
 }
 section.specials .category-nav .category-picker i {
   transition: all 0.2s ease-in-out;
@@ -656,19 +659,17 @@ section.specials .category-nav .category-picker .options > * {
 section.specials .category-nav .category-picker .options > *:hover {
   background-color: var(--clr-pri);
 }
-section.specials .category-nav .line {
-  height: 1px;
-  background-color: var(--clr-drk);
-  flex-grow: 1;
-}
 section.specials .category-nav .swiper-nav > * {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  font-size: var(--fs-l);
+  font-size: var(--fs-s);
   color: var(--clr-pri);
+  padding: 0.5rem 0.75rem;
+  border-radius: 1.5rem;
+  border: 2px solid var(--clr-pri);
 }
 section.specials .cards {
   margin-top: 1rem;

@@ -81,8 +81,8 @@ var specialsSwiper = new Swiper(".specials .mySwiper", {
     slidesPerView: "auto",
     // spaceBetween: 30,
     navigation: {
-        nextEl: '.swiper-nav .fa-circle-chevron-right',
-        prevEl: '.swiper-nav .fa-circle-chevron-left',
+        nextEl: '.swiper-nav .fa-chevron-right',
+        prevEl: '.swiper-nav .fa-chevron-left',
     },
 })
 // -------------------------

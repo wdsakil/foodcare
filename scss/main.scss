@@ -496,6 +496,7 @@ section.about {
 
     @media (max-width: 440px){
       min-width: 80%;
+      height: 400px;
     }
 
     img {
@@ -611,7 +612,7 @@ section.about {
     margin-top: 1.5rem;
   }
 }
-// --------About Section--------
+// --------Specials Section--------
 // -----------------------------
 section.specials {
   width: 90vw;
@@ -624,19 +625,25 @@ section.specials {
     display: flex;
     font-size: var(--fs-m);
     align-items: center;
+    justify-content: space-between;
     gap: 1rem;
 
     .category-picker {
       cursor: pointer;
       user-select: none;
       position: relative;
-      width: max-content;
-      font-size: var(--fs-s);
-      padding: 0.75rem 1rem;
-      border-radius: 1.5rem;
       display: flex;
-      gap: 1rem;
+      justify-content: space-between;
+      font-size: var(--fs-s);
+      padding: .5rem 1rem;
+      border-radius: 1.5rem;
       border: 2px solid var(--clr-pri);
+      
+      span{
+        text-align: left;
+        width: 130px;
+
+      }
 
       i {
         transition: all 0.2s ease-in-out;
@@ -675,16 +682,19 @@ section.specials {
       }
     }
 
-    .line {
-      height: 1px;
-      background-color: var(--clr-drk);
-      flex-grow: 1;
-    }
+    // .line {
+    //   height: 1px;
+    //   background-color: var(--clr-drk);
+    //   flex-grow: 1;
+    // }
     .swiper-nav > * {
       cursor: pointer;
       user-select: none;
-      font-size: var(--fs-l);
+      font-size: var(--fs-s);
       color: var(--clr-pri);
+      padding: .5rem .75rem;
+      border-radius: 1.5rem;
+      border: 2px solid var(--clr-pri);
     }
   }
 
