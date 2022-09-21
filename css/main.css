@@ -859,21 +859,6 @@ section.reviews .cards .card {
   text-align: left;
   max-width: 300px;
 }
-section.reviews .cards .card.rs1 {
-  grid-row: span 2;
-}
-section.reviews .cards .card.rs1a {
-  grid-row: span 3;
-}
-section.reviews .cards .card.rs2 {
-  grid-row: span 4;
-}
-section.reviews .cards .card.rs2a {
-  grid-row: span 5;
-}
-section.reviews .cards .card.rs3 {
-  grid-row: span 6;
-}
 section.reviews .cards .card .review-img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1003,4 +988,200 @@ section.reviews .cards .card .author-wrapper .author .desgn a {
 .aside .dialogue.active {
   visibility: visible;
   opacity: 1;
+}
+
+.grsn1 {
+  grid-row: span 1;
+}
+
+.grsn2 {
+  grid-row: span 2;
+}
+
+.grsn3 {
+  grid-row: span 3;
+}
+
+.grsn4 {
+  grid-row: span 4;
+}
+
+.grsn5 {
+  grid-row: span 5;
+}
+
+.grsn6 {
+  grid-row: span 6;
+}
+
+.grsn7 {
+  grid-row: span 7;
+}
+
+.grsn8 {
+  grid-row: span 8;
+}
+
+.grsn9 {
+  grid-row: span 9;
+}
+
+.grsn10 {
+  grid-row: span 10;
+}
+
+.grsn11 {
+  grid-row: span 11;
+}
+
+.grsn12 {
+  grid-row: span 12;
+}
+
+.grsn13 {
+  grid-row: span 13;
+}
+
+.grsn14 {
+  grid-row: span 14;
+}
+
+.grsn15 {
+  grid-row: span 15;
+}
+
+.grsn16 {
+  grid-row: span 16;
+}
+
+.grsn17 {
+  grid-row: span 17;
+}
+
+.grsn18 {
+  grid-row: span 18;
+}
+
+.grsn19 {
+  grid-row: span 19;
+}
+
+.grsn20 {
+  grid-row: span 20;
+}
+
+.grsn21 {
+  grid-row: span 21;
+}
+
+.grsn22 {
+  grid-row: span 22;
+}
+
+.grsn23 {
+  grid-row: span 23;
+}
+
+.grsn24 {
+  grid-row: span 24;
+}
+
+.grsn25 {
+  grid-row: span 25;
+}
+
+.grsn26 {
+  grid-row: span 26;
+}
+
+.grsn27 {
+  grid-row: span 27;
+}
+
+.grsn28 {
+  grid-row: span 28;
+}
+
+.grsn29 {
+  grid-row: span 29;
+}
+
+.grsn30 {
+  grid-row: span 30;
+}
+
+.grsn31 {
+  grid-row: span 31;
+}
+
+.grsn32 {
+  grid-row: span 32;
+}
+
+.grsn33 {
+  grid-row: span 33;
+}
+
+.grsn34 {
+  grid-row: span 34;
+}
+
+.grsn35 {
+  grid-row: span 35;
+}
+
+.grsn36 {
+  grid-row: span 36;
+}
+
+.grsn37 {
+  grid-row: span 37;
+}
+
+.grsn38 {
+  grid-row: span 38;
+}
+
+.grsn39 {
+  grid-row: span 39;
+}
+
+.grsn40 {
+  grid-row: span 40;
+}
+
+.grsn41 {
+  grid-row: span 41;
+}
+
+.grsn42 {
+  grid-row: span 42;
+}
+
+.grsn43 {
+  grid-row: span 43;
+}
+
+.grsn44 {
+  grid-row: span 44;
+}
+
+.grsn45 {
+  grid-row: span 45;
+}
+
+.grsn46 {
+  grid-row: span 46;
+}
+
+.grsn47 {
+  grid-row: span 47;
+}
+
+.grsn48 {
+  grid-row: span 48;
+}
+
+.grsn49 {
+  grid-row: span 49;
 }/*# sourceMappingURL=main.css.map */

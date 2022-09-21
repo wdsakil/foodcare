@@ -885,23 +885,6 @@ section.reviews {
       text-align: left;
       max-width: 300px;
 
-
-      &.rs1{
-        grid-row: span 2;
-      }
-      &.rs1a{
-        grid-row: span 3;
-      }
-      &.rs2{
-        grid-row: span 4;
-      }
-      &.rs2a{
-        grid-row: span 5;
-      }
-      &.rs3{
-        grid-row: span 6;
-      }
-
       .review-img{
         object-fit: cover;
         border-top-left-radius: 1.5rem;
@@ -1040,6 +1023,14 @@ section.reviews {
     }
   }
 }
+
+// Classlist Library
+@for $i from 1 to 50{
+  .grsn#{$i} {
+    grid-row: span $i;
+  }
+}
+
 
 // Small devices (landscape phones, 576px and up)
 // @media (min-width: 576px) { ... }
