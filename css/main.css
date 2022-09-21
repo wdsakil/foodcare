@@ -990,42 +990,6 @@ section.reviews .cards .card .author-wrapper .author .desgn a {
   opacity: 1;
 }
 
-.grsn1 {
-  grid-row: span 1;
-}
-
-.grsn2 {
-  grid-row: span 2;
-}
-
-.grsn3 {
-  grid-row: span 3;
-}
-
-.grsn4 {
-  grid-row: span 4;
-}
-
-.grsn5 {
-  grid-row: span 5;
-}
-
-.grsn6 {
-  grid-row: span 6;
-}
-
-.grsn7 {
-  grid-row: span 7;
-}
-
-.grsn8 {
-  grid-row: span 8;
-}
-
-.grsn9 {
-  grid-row: span 9;
-}
-
 .grsn10 {
   grid-row: span 10;
 }
@@ -1144,44 +1108,4 @@ section.reviews .cards .card .author-wrapper .author .desgn a {
 
 .grsn39 {
   grid-row: span 39;
-}
-
-.grsn40 {
-  grid-row: span 40;
-}
-
-.grsn41 {
-  grid-row: span 41;
-}
-
-.grsn42 {
-  grid-row: span 42;
-}
-
-.grsn43 {
-  grid-row: span 43;
-}
-
-.grsn44 {
-  grid-row: span 44;
-}
-
-.grsn45 {
-  grid-row: span 45;
-}
-
-.grsn46 {
-  grid-row: span 46;
-}
-
-.grsn47 {
-  grid-row: span 47;
-}
-
-.grsn48 {
-  grid-row: span 48;
-}
-
-.grsn49 {
-  grid-row: span 49;
 }/*# sourceMappingURL=main.css.map */

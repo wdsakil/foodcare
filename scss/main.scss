@@ -1025,7 +1025,7 @@ section.reviews {
 }
 
 // Classlist Library
-@for $i from 1 to 50{
+@for $i from 10 to 40{
   .grsn#{$i} {
     grid-row: span $i;
   }

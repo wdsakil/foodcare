@@ -146,13 +146,18 @@ for (const pricing of pricings) {
 
 // Review Image Margin issue
 const reviewQuote = document.querySelectorAll('.reviews .quote')
-// const reviewImage = document.querySelectorAll('.reviews .review-img')
-
-// console.dir(quote1)
-// console.dir(quote2)
 
 for (const quote of reviewQuote) {
     if (quote.previousElementSibling === null) {
         quote.style.marginTop = 0
+    }
+}
+
+// Review Card grid row spans
+const reviewCards = document.querySelectorAll('.reviews .card')
+
+if (window.innerWidth >= 600) {
+    for (const card of reviewCards) {
+        card.classList.add('grsn' + Math.round(card.offsetHeight / 16))
     }
 }
