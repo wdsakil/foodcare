@@ -599,9 +599,6 @@ section.about .btn {
 section.specials {
   width: 90vw;
   margin-inline: auto;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-  text-align: center;
 }
 section.specials .category-nav {
   display: flex;
@@ -821,6 +818,138 @@ section.platters .pricing {
 section.platters .pricing .bdt {
   font-size: var(--fs-m);
   margin-right: 0.25rem;
+}
+
+section.reviews {
+  width: 85vw;
+  margin-inline: auto;
+}
+section.reviews .cards {
+  margin-top: 1rem;
+  width: min(1400px, 100%);
+  margin-inline: auto;
+  overflow: hidden;
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px) {
+  section.reviews .cards {
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  section.reviews .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  section.reviews .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+section.reviews .cards .card {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  max-width: 300px;
+}
+section.reviews .cards .card.rs1 {
+  grid-row: span 2;
+}
+section.reviews .cards .card.rs1a {
+  grid-row: span 3;
+}
+section.reviews .cards .card.rs2 {
+  grid-row: span 4;
+}
+section.reviews .cards .card.rs2a {
+  grid-row: span 5;
+}
+section.reviews .cards .card.rs3 {
+  grid-row: span 6;
+}
+section.reviews .cards .card .review-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  width: 100%;
+  aspect-ratio: 5/3;
+}
+section.reviews .cards .card .quote {
+  background-color: #cddef2;
+  padding: 2rem;
+  padding-top: 0;
+  border-radius: 1.5rem;
+  color: rgba(0, 0, 0, 0.8);
+  position: relative;
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+}
+section.reviews .cards .card .quote::before {
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 1rem 1.5rem 0 1rem;
+  border-color: #cddef2 transparent transparent transparent;
+}
+section.reviews .cards .card .quote .fa-quote-left {
+  font-size: var(--fs-xxxl);
+  color: rgba(0, 0, 0, 0.3333333333);
+  margin-right: 0.5rem;
+}
+section.reviews .cards .card .quote p {
+  line-height: 1.3;
+}
+section.reviews .cards .card .quote .fa-link {
+  font-size: var(--fs-s);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: #a8cbf3;
+  border-radius: 1rem;
+}
+section.reviews .cards .card .author-wrapper {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-left: 1rem;
+}
+section.reviews .cards .card .author-wrapper img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 2rem;
+  border: 1px solid var(--clr-bg);
+}
+section.reviews .cards .card .author-wrapper .author {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+section.reviews .cards .card .author-wrapper .author .name {
+  font-size: var(--fs-xs);
+  font-weight: 400;
+}
+section.reviews .cards .card .author-wrapper .author .desgn {
+  font-size: 0.75rem;
+  color: rgb(99, 99, 99);
+}
+section.reviews .cards .card .author-wrapper .author .desgn a {
+  color: var(--clr-drk);
 }
 
 @media print {

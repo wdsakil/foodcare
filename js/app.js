@@ -91,7 +91,6 @@ var specialsSwiper = new Swiper(".specials .mySwiper", {
 
 // Medium Zoom
 mediumZoom('.zoomable', {
-    margin: header.clientHeight - 10,
     background: '#0009'
 })
 
@@ -133,14 +132,27 @@ categoryPicker.addEventListener('click', (e) => {
 
 // Discount Banner
 const pricings = document.querySelectorAll('.specials .card .pricing')
-for (const pricing of pricings){
-   const oldPrice = Number(pricing.querySelector('.old').textContent)
-   const newPrice = Number(pricing.querySelector('.new').textContent)
-   const discount = Math.round(((oldPrice - newPrice) / oldPrice) * 100)
-      if(discount >= 40){
+for (const pricing of pricings) {
+    const oldPrice = Number(pricing.querySelector('.old').textContent)
+    const newPrice = Number(pricing.querySelector('.new').textContent)
+    const discount = Math.round(((oldPrice - newPrice) / oldPrice) * 100)
+    if (discount >= 40) {
         const banner = document.createElement("div")
         banner.className = 'banner'
         banner.innerHTML = discount + '% Discount'
         pricing.parentElement.appendChild(banner)
+    }
+}
+
+// Review Image Margin issue
+const reviewQuote = document.querySelectorAll('.reviews .quote')
+// const reviewImage = document.querySelectorAll('.reviews .review-img')
+
+// console.dir(quote1)
+// console.dir(quote2)
+
+for (const quote of reviewQuote) {
+    if (quote.previousElementSibling === null) {
+        quote.style.marginTop = 0
     }
 }
