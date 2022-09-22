@@ -854,7 +854,7 @@ section.platters {
 // -------Reviews Section-------
 // -----------------------------
 section.reviews {
-  width: 85vw;
+  width: 90vw;
   margin-inline: auto;
 
   .cards {
@@ -863,34 +863,23 @@ section.reviews {
     margin-inline: auto;
     overflow: hidden;
     display: grid;
-    justify-items: center;
-    gap: 1.5rem;
-    grid-template-columns: 1fr;
-    
-    @media (min-width: 600px) {
-      gap: 1rem;
-      grid-template-columns: 1fr 1fr;
-    }
-    @media (min-width: 900px) {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    @media (min-width: 1200px) {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
+    gap: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, min(500px, 90vw));
 
     .card {
       height: max-content;
       position: relative;
       display: inline-block;
       text-align: left;
-      max-width: 300px;
 
       .review-img{
         object-fit: cover;
+        object-position: center;
         border-top-left-radius: 1.5rem;
         border-top-right-radius: 1.5rem;
         width: 100%;
-        aspect-ratio: 5/3;
+        aspect-ratio: 5 / 3;
       }
       .quote {
         background-color: #cddef2;
@@ -1025,7 +1014,7 @@ section.reviews {
 }
 
 // Classlist Library
-@for $i from 10 to 40{
+@for $i from 1 to 50{
   .grsn#{$i} {
     grid-row: span $i;
   }
