@@ -94,6 +94,26 @@ mediumZoom('.zoomable', {
     background: '#0009'
 })
 
+// --Review section Images full height on zoomed in
+// --and keep aspect ratio after zooming out
+
+const reviewImgs = document.querySelectorAll('.review-img')
+for(const img of reviewImgs){
+    img.addEventListener('click', () =>{
+        img.style.aspectRatio = "auto"
+        
+        setTimeout(()=>{
+            const bigImg = document.querySelector('.medium-zoom-image--opened')
+            bigImg.addEventListener('click', ()=>{
+                reviewImgs.forEach((e)=>{
+                    e.style.aspectRatio = "5 / 3"
+                })
+            })
+        }, 100)
+    })
+}
+
+
 // add to cart under development
 function underDevelopment() {
     document.querySelector('#under-development').classList.toggle('active')
