@@ -175,9 +175,16 @@ for (const quote of reviewQuote) {
 
 // Review Card grid row spans
 
-window.addEventListener('resize', (event) => {
-    const reviewCards = document.querySelectorAll('.reviews .card')
+const reviewCards = document.querySelectorAll('.reviews .card')
 
+if (window.innerWidth >= 600) {
+    for (const card of reviewCards) {
+        card.classList.add('grsn' + Math.round(card.offsetHeight / 16))
+    }
+}
+
+window.addEventListener('resize', (event) => {
+    reviewCards = document.querySelectorAll('.reviews .card')
     if (window.innerWidth >= 600) {
         for (const card of reviewCards) {
             card.classList.add('grsn' + Math.round(card.offsetHeight / 16))
