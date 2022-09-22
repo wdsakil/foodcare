@@ -98,14 +98,14 @@ mediumZoom('.zoomable', {
 // --and keep aspect ratio after zooming out
 
 const reviewImgs = document.querySelectorAll('.review-img')
-for(const img of reviewImgs){
-    img.addEventListener('click', () =>{
+for (const img of reviewImgs) {
+    img.addEventListener('click', () => {
         img.style.aspectRatio = "auto"
-        
-        setTimeout(()=>{
+
+        setTimeout(() => {
             const bigImg = document.querySelector('.medium-zoom-image--opened')
-            bigImg.addEventListener('click', ()=>{
-                reviewImgs.forEach((e)=>{
+            bigImg.addEventListener('click', () => {
+                reviewImgs.forEach((e) => {
                     e.style.aspectRatio = "5 / 3"
                 })
             })
@@ -174,10 +174,13 @@ for (const quote of reviewQuote) {
 }
 
 // Review Card grid row spans
-const reviewCards = document.querySelectorAll('.reviews .card')
 
-if (window.innerWidth >= 600) {
-    for (const card of reviewCards) {
-        card.classList.add('grsn' + Math.round(card.offsetHeight / 16))
+window.addEventListener('resize', (event) => {
+    const reviewCards = document.querySelectorAll('.reviews .card')
+
+    if (window.innerWidth >= 600) {
+        for (const card of reviewCards) {
+            card.classList.add('grsn' + Math.round(card.offsetHeight / 16))
+        }
     }
-}
+})
