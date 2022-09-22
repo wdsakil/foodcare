@@ -832,7 +832,7 @@ section.reviews .cards {
   display: grid;
   gap: 1rem;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, min(500px, 90vw));
+  grid-template-columns: repeat(auto-fit, min(300px, 90vw));
 }
 section.reviews .cards .card {
   height: -webkit-max-content;
