@@ -196,7 +196,6 @@ if (window.innerWidth >= 600) {
 }
 
 window.addEventListener('resize', (e) => {
-    console.log(e)
     if (window.innerWidth >= 600) {
         for (const card of reviewCards) {
             card.classList.add('grsn' + Math.round(card.offsetHeight / 16))
