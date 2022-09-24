@@ -193,13 +193,13 @@ a:focus {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-bottom: 3rem;
     top: 0;
     bottom: 0;
     left: 100%;
     width: 200px;
     background-color: var(--clr-lit);
-    // padding-top: 10rem;
     overflow-y: auto;
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
@@ -207,17 +207,21 @@ a:focus {
     a {
       width: 100%;
       transition: color 0.2s ease-in-out;
-      padding: 0.75rem 0 0.75rem 1rem;
+      padding: 1rem 0 1rem 1.5rem;
       color: var(--clr-drk);
       font-weight: 300;
 
-      &.our-menu {
-        /*color: var(--clr-pri);*/
-        font-weight: 400;
+      &#header-menu-btn {
+        font-weight: 700;
+        color: var(--clr-lit);
+        background-color: var(--clr-pri);
+        &:hover{
+          background-color: #f02c2c;
+        }
       }
 
       &:hover {
-        opacity: 0.75;
+        background-color: #0002;
       }
     }
 
@@ -261,6 +265,15 @@ a:focus {
         width: auto;
         padding: 0.25rem 0.75rem;
         color: var(--clr-lit);
+
+        &:hover {
+          color: #fff9;
+          background-color: transparent;
+        }
+
+        &#header-menu-btn {
+          border-radius: 2rem;
+        }
       }
     }
     .fa-burger {
@@ -873,7 +886,7 @@ section.reviews {
       display: inline-block;
       text-align: left;
 
-      .review-img{
+      .review-img {
         object-fit: cover;
         object-position: center;
         border-top-left-radius: 1.5rem;
@@ -892,7 +905,7 @@ section.reviews {
         margin-bottom: 1.5rem;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           left: 1.5rem;
           top: 100%;
@@ -905,18 +918,18 @@ section.reviews {
         .fa-quote-left {
           font-size: var(--fs-xxxl);
           color: #0005;
-          margin-right: .5rem;
+          margin-right: 0.5rem;
         }
-        p{
+        p {
           line-height: 1.3;
         }
-        .fa-link{
+        .fa-link {
           font-size: var(--fs-s);
           position: absolute;
           right: 0;
           bottom: 0;
-          padding: .5rem;
-          margin: .5rem;
+          padding: 0.5rem;
+          margin: 0.5rem;
           background-color: #a8cbf3;
           border-radius: 1rem;
         }
@@ -938,16 +951,16 @@ section.reviews {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          gap: .2rem;
+          gap: 0.2rem;
           .name {
             font-size: var(--fs-xs);
             font-weight: 400;
           }
           .desgn {
-            font-size: .75rem;
+            font-size: 0.75rem;
             color: rgb(99, 99, 99);
 
-            a{
+            a {
               color: var(--clr-drk);
             }
           }
@@ -1014,12 +1027,11 @@ section.reviews {
 }
 
 // Classlist Library
-@for $i from 1 to 50{
+@for $i from 1 to 50 {
   .grsn#{$i} {
     grid-row: span $i;
   }
 }
-
 
 // Small devices (landscape phones, 576px and up)
 // @media (min-width: 576px) { ... }
