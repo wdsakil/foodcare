@@ -89,6 +89,18 @@ var specialsSwiper = new Swiper(".specials .mySwiper", {
 // ---------Others---------
 // -------------------------
 
+// ---------Basic Functions
+
+// Remove Class by Initial letters / prefix
+function removeClassesByPrefix(el, prefix)
+{
+    for(var i = el.classList.length - 1; i >= 0; i--) {
+        if(el.classList[i].startsWith(prefix)) {
+            el.classList.remove(el.classList[i]);
+        }
+    }
+}
+
 // Medium Zoom
 mediumZoom('.zoomable', {
     background: '#0009'
@@ -183,11 +195,15 @@ if (window.innerWidth >= 600) {
     }
 }
 
-window.addEventListener('resize', (event) => {
-    reviewCards = document.querySelectorAll('.reviews .card')
+window.addEventListener('resize', (e) => {
+    console.log(e)
     if (window.innerWidth >= 600) {
         for (const card of reviewCards) {
             card.classList.add('grsn' + Math.round(card.offsetHeight / 16))
+        }
+    } else if (window.innerWidth < 600) {
+        for (const card of reviewCards) {
+            removeClassesByPrefix(card, 'grsn')
         }
     }
 })
